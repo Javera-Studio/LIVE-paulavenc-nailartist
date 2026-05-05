@@ -562,9 +562,14 @@ function Footer() {
       <div className="border-t border-background/10">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-2 px-6 py-5 text-xs text-background/50 md:flex-row md:items-center md:px-10">
           <p>© {new Date().getFullYear()} Paula Venc — Private Nailartist</p>
-          <Link to="/impressum" className="transition hover:text-rose">
-            Impressum
-          </Link>
+          <div className="flex gap-6">
+            <Link to="/impressum" className="transition hover:text-rose">
+              Impressum
+            </Link>
+            <Link to="/datenschutz" className="transition hover:text-rose">
+              Datenschutzerklärung
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
