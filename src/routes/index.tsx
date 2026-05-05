@@ -1,5 +1,5 @@
 import type * as React from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroNails from "@/assets/hero-nails.jpg";
 import aboutArtist from "@/assets/paula-portrait.png";
 import logo from "@/assets/logo-paula-venc.jpg";
@@ -560,9 +560,12 @@ function Footer() {
         </div>
       </div>
       <div className="border-t border-background/10">
-        <p className="mx-auto max-w-7xl px-6 py-5 text-xs text-background/50 md:px-10">
-          © {new Date().getFullYear()} Paula Venc — Private Nailartist
-        </p>
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-2 px-6 py-5 text-xs text-background/50 md:flex-row md:items-center md:px-10">
+          <p>© {new Date().getFullYear()} Paula Venc — Private Nailartist</p>
+          <Link to="/impressum" className="transition hover:text-rose">
+            Impressum
+          </Link>
+        </div>
       </div>
     </footer>
   );
