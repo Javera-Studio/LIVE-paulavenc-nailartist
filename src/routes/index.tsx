@@ -208,7 +208,7 @@ function Services() {
 }
 
 function Gallery() {
-  const imgs = [g1, g2, g3, g4, g5, g6];
+  const imgs = [g1, g2, g3, g4, g5, g6, g7, g8, g9];
   return (
     <section id="gallery" className="bg-nude py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
