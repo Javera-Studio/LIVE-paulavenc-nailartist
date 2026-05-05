@@ -86,25 +86,47 @@ function Hero() {
   );
 }
 
+function Stars() {
+  return (
+    <div aria-label="5 von 5 Sternen" className="flex items-center justify-center gap-1 text-gold">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2.5l2.95 6.36 6.8.7-5.1 4.78 1.45 6.86L12 17.77 5.9 21.2l1.45-6.86-5.1-4.78 6.8-.7L12 2.5z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
 function Trust() {
   const testimonials = [
-    { text: "Die schönsten Nägel, die ich je hatte. Absolut präzise und so natürlich.", name: "Lena M." },
-    { text: "Ruhige Atmosphäre, perfektes Ergebnis. Ich gehe zu niemandem sonst.", name: "Sophia K." },
-    { text: "Höchste Hygiene, viel Liebe zum Detail. Sehr empfehlenswert.", name: "Anna R." },
+    { text: "Perfekte Nägel – wie immer! Komme seit Jahren und bin jedes Mal begeistert.", name: "Ursula" },
+    { text: "Alles perfekt! Super Nägel, angenehme Atmosphäre – komme wieder 😊", name: "Ursula" },
+    { text: "Ich war anfangs skeptisch, aber das Ergebnis ist einfach wunderschön. So präzise und sauber gearbeitet – ich liebe meine Nägel!", name: "Sabrina" },
+    { text: "Super Maniküristin – die japanische Maniküre sieht toll aus.", name: "Miriam" },
+    { text: "Excellent service, with great care and attention to detail. Definitely recommended!", name: "Francesca" },
+    { text: "Die Beste in Wien – immer top Ergebnis und wunderschöne Nägel.", name: "Aleksandra" },
   ];
   return (
-    <section className="bg-nude py-20 md:py-28">
+    <section className="bg-nude py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 text-center md:px-10">
-        <p className="text-xs uppercase tracking-[0.35em] text-rose">Vertrauen</p>
-        <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">5.0 Bewertung</h2>
-        <p className="mt-3 text-base font-light text-muted-foreground">
-          <span className="text-gold">★ ★ ★ ★ ★</span> &nbsp; Über 600 zufriedene Kundinnen
+        <p className="text-xs uppercase tracking-[0.35em] text-rose">Bewertungen</p>
+        <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">
+          Das sagen meine Kundinnen
+        </h2>
+        <div className="mx-auto gold-divider my-8" />
+        <p className="text-sm font-light text-muted-foreground">
+          <span className="text-gold">★</span> 5.0 Bewertung — über 650 zufriedene Kundinnen
         </p>
-        <div className="mx-auto gold-divider my-12" />
-        <div className="grid gap-8 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <figure key={t.name} className="rounded-2xl bg-background p-8 shadow-soft">
-              <blockquote className="font-serif text-lg italic leading-relaxed text-foreground/90">
+
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
+          {testimonials.map((t, i) => (
+            <figure
+              key={i}
+              className="flex flex-col rounded-2xl bg-background p-8 shadow-soft transition duration-500 hover:-translate-y-1 hover:shadow-elegant"
+            >
+              <Stars />
+              <blockquote className="mt-5 flex-1 font-serif text-base italic leading-relaxed text-foreground/90">
                 “{t.text}”
               </blockquote>
               <figcaption className="mt-6 text-xs uppercase tracking-[0.3em] text-muted-foreground">
@@ -113,6 +135,10 @@ function Trust() {
             </figure>
           ))}
         </div>
+
+        <p className="mt-12 text-[11px] uppercase tracking-[0.3em] text-muted-foreground/80">
+          Verifizierte Bewertungen über Treatwell
+        </p>
       </div>
     </section>
   );
