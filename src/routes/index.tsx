@@ -479,7 +479,7 @@ function Index() {
       <Services />
       <Gallery />
       <About />
-      <Info />
+      
       <Contact />
       <Booking />
       <Footer />
