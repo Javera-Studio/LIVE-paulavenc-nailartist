@@ -129,6 +129,7 @@ function VideoShowcase() {
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <div className="relative overflow-hidden rounded-[1.75rem] shadow-elegant">
           <video
+            ref={(el) => { if (el) el.playbackRate = 0.5; }}
             src={showcaseVideo}
             autoPlay
             muted
