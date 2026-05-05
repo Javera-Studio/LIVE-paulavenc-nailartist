@@ -253,12 +253,13 @@ function About() {
           <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">Hi, ich bin Paula.</h2>
           <div className="gold-divider my-8" />
           <p className="text-base font-light leading-relaxed text-muted-foreground">
-            Mit jahrelanger Erfahrung als private Nailartist in Wien liegt mein Fokus auf
-            natürlichen Ergebnissen, höchster Präzision und einer entspannten Atmosphäre,
-            in der du wirklich abschalten kannst.
+            Paula ist seit 2018 leidenschaftliche Nageldesignerin und spezialisiert sich auf kurze, natürliche Gelnägel.
           </p>
           <p className="mt-5 text-base font-light leading-relaxed text-muted-foreground">
-            Ich nehme mir bewusst Zeit — für jede Hand, jedes Detail und für dich.
+            Als private Nailartist legt sie besonderen Wert auf präzise, saubere Arbeit und ein Ergebnis, das natürlich wirkt und perfekt zum Alltag passt.
+          </p>
+          <p className="mt-5 text-base font-light leading-relaxed text-muted-foreground">
+            Ihr Fokus liegt darauf, die natürliche Schönheit der Nägel zu unterstreichen – mit viel Sorgfalt, Ruhe und einem Auge fürs Detail.
           </p>
         </div>
       </div>
