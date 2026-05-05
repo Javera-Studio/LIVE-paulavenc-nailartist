@@ -46,43 +46,115 @@ function Nav() {
   );
 }
 
+function CtaButton({ children = "Jetzt Termin sichern", className = "" }: { children?: React.ReactNode; className?: string }) {
+  return (
+    <a
+      href={BOOKING_URL}
+      className={
+        "inline-block rounded-full bg-rose px-8 py-4 text-xs uppercase tracking-[0.25em] text-primary-foreground shadow-soft transition hover:bg-rose-deep hover:shadow-elegant " +
+        className
+      }
+    >
+      {children}
+    </a>
+  );
+}
+
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-background pt-28 pb-20 md:pt-32 md:pb-28">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2 md:px-10">
         <div className="fade-up">
-          <p className="mb-6 text-xs uppercase tracking-[0.35em] text-rose">Private Nailartist · Wien</p>
-          <h1 className="font-serif text-5xl leading-[1.05] text-foreground md:text-6xl lg:text-7xl">
-            Natürliche, elegante Nägel in Wien
+          <p className="mb-6 text-xs uppercase tracking-[0.35em] text-rose">Private Nailartist · Wien 1010</p>
+          <h1 className="font-serif text-5xl leading-[1.05] text-foreground md:text-6xl lg:text-[4.25rem]">
+            Natürliche Gelnägel & Russian Manicure in Wien <span className="text-rose">(1010)</span>
           </h1>
           <div className="gold-divider my-8" />
           <p className="max-w-md text-lg font-light leading-relaxed text-muted-foreground">
-            Präzision, Hygiene & perfekte Ergebnisse — in einer ruhigen, privaten Atmosphäre, ganz auf dich abgestimmt.
+            Präzise, saubere Nagelarbeit – in ruhiger, privater Atmosphäre.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href={BOOKING_URL}
-              className="rounded-full bg-rose px-8 py-4 text-xs uppercase tracking-[0.25em] text-primary-foreground shadow-soft transition hover:bg-rose-deep hover:shadow-elegant"
-            >
-              Jetzt Termin buchen
-            </a>
-            <a
-              href="#services"
-              className="rounded-full border border-foreground/15 px-8 py-4 text-xs uppercase tracking-[0.25em] text-foreground/80 transition hover:border-rose hover:text-rose"
-            >
-              Mehr erfahren
-            </a>
+          <p className="mt-4 max-w-md text-sm font-light text-foreground/70">
+            <span className="text-gold">✦</span> &nbsp; Nur eine Kundin pro Termin – volle Aufmerksamkeit für dich.
+          </p>
+          <div className="mt-10 flex flex-col items-start gap-3">
+            <div className="flex flex-wrap items-center gap-4">
+              <CtaButton />
+              <a
+                href="#services"
+                className="rounded-full border border-foreground/15 px-8 py-4 text-xs uppercase tracking-[0.25em] text-foreground/80 transition hover:border-rose hover:text-rose"
+              >
+                Leistungen ansehen
+              </a>
+            </div>
+            <p className="text-xs italic font-light text-muted-foreground">
+              Beliebte Termine schnell vergeben.
+            </p>
           </div>
         </div>
         <div className="relative">
           <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-nude" />
           <img
             src={heroNails}
-            alt="Elegante natürliche Maniküre in Nude-Tönen"
+            alt="Elegante natürliche Maniküre in Nude-Tönen – Paula Venc Wien 1010"
             width={1536}
             height={1280}
             className="aspect-[4/5] w-full rounded-[1.5rem] object-cover shadow-elegant"
           />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function VideoShowcase() {
+  return (
+    <section className="bg-background pb-20 md:pb-28">
+      <div className="mx-auto max-w-5xl px-6 md:px-10">
+        <div className="relative overflow-hidden rounded-[1.75rem] shadow-elegant">
+          <img
+            src={g1}
+            alt="Close-up natürlicher, glänzender Gelnägel"
+            className="aspect-[16/9] w-full object-cover"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-rose/10 via-transparent to-nude/20" />
+        </div>
+        <p className="mt-5 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          Nagelstudio in Wien, 1010 — Nähe Schwarzenbergplatz
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function USP() {
+  const items = [
+    { t: "Private Atmosphäre", d: "Keine andere Kundin gleichzeitig — du hast den Raum für dich." },
+    { t: "Präzise & sauber", d: "Russian Manicure mit höchster Genauigkeit und sterilen Werkzeugen." },
+    { t: "Natürliche Eleganz", d: "Fokus auf zarte, alltagstaugliche Designs in Nude- und Roséˇtönen." },
+    { t: "Über 650 Kundinnen", d: "Vertrauen aus Jahren Erfahrung — viele kommen seit dem ersten Termin wieder." },
+  ];
+  return (
+    <section className="py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6 md:px-10">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-xs uppercase tracking-[0.35em] text-rose">Warum Paula</p>
+          <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">
+            Warum Kundinnen sich für Paula entscheiden
+          </h2>
+          <div className="mx-auto gold-divider my-8" />
+        </div>
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {items.map((it, i) => (
+            <article
+              key={it.t}
+              className="rounded-2xl border border-border/70 bg-card p-8 transition hover:border-rose hover:shadow-soft"
+            >
+              <span className="font-serif text-sm text-gold">0{i + 1}</span>
+              <h3 className="mt-3 font-serif text-xl text-foreground">{it.t}</h3>
+              <div className="mt-3 h-px w-8 bg-border" />
+              <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">{it.d}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
