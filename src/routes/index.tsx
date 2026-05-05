@@ -146,7 +146,7 @@ function VideoShowcase() {
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-rose/10 via-transparent to-nude/20" />
         </div>
         <p className="mt-5 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
-          Nagelstudio in Wien, 1010 — Nähe Schwarzenbergplatz
+          Nagelstudio in Wien, 1010 — nur wenige Gehminuten von der Station Schwarzenbergplatz
         </p>
         <div className="mt-10 flex justify-center">
           <CtaButton />
