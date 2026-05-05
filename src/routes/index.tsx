@@ -561,9 +561,20 @@ function Footer() {
   );
 }
 
+function StickyMobileCta() {
+  return (
+    <a
+      href="tel:+436642215398"
+      className="fixed inset-x-0 bottom-0 z-50 flex items-center justify-center gap-2 bg-rose px-6 py-4 text-center text-sm font-medium tracking-wide text-primary-foreground shadow-elegant md:hidden"
+    >
+      <span>Jetzt buchen – 0664 221 5398</span>
+    </a>
+  );
+}
+
 function Index() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background pb-16 md:pb-0">
       <Nav />
       <Hero />
       <VideoShowcase />
@@ -575,6 +586,7 @@ function Index() {
       <Hours />
       <Booking />
       <Footer />
+      <StickyMobileCta />
     </main>
   );
 }
