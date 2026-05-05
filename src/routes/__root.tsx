@@ -54,6 +54,51 @@ export const Route = createRootRoute({
         href: appCss,
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BeautySalon",
+          name: "Paula Venc – Private Nailartist",
+          description: "Natürliche, elegante Nägel in Wien. Präzision, Hygiene und perfekte Ergebnisse von Paula Venc – Private Nailartist.",
+          url: "https://elegant-nail-vienna.lovable.app/",
+          telephone: "+436642215398",
+          email: "office@paulavenc.at",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Fichtegasse 7",
+            addressLocality: "Wien",
+            postalCode: "1010",
+            addressCountry: "AT",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 48.2021,
+            longitude: 16.3767,
+          },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              opens: "11:00",
+              closes: "20:30",
+            },
+          ],
+          priceRange: "€€",
+          image: "https://elegant-nail-vienna.lovable.app/assets/logo-paula-venc-Cno5jLH0.jpg",
+          sameAs: [
+            "https://www.instagram.com/paula.venc/",
+            "https://www.facebook.com/Paula-Venc-Private-Nailartist",
+          ],
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5.0",
+            reviewCount: "650",
+          },
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
