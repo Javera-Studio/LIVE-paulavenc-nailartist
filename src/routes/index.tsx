@@ -214,6 +214,9 @@ function Trust() {
         <p className="mt-12 text-[11px] uppercase tracking-[0.3em] text-muted-foreground/80">
           Verifizierte Bewertungen über Treatwell
         </p>
+        <div className="mt-10">
+          <CtaButton />
+        </div>
       </div>
     </section>
   );
@@ -255,8 +258,8 @@ function Services() {
     <section id="services" className="bg-nude/40 py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-rose">Preise</p>
-          <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">Leistungen & Preise</h2>
+          <p className="text-xs uppercase tracking-[0.35em] text-rose">Leistungen & Preise</p>
+          <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">Nageldesign & Maniküre in Wien</h2>
           <div className="mx-auto gold-divider my-8" />
           <p className="text-sm font-light leading-relaxed text-muted-foreground">
             Klare Preise für hochwertige, natürliche Ergebnisse.
@@ -295,6 +298,9 @@ function Services() {
         <p className="mt-3 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
           <span className="text-gold">✦</span> &nbsp; Nagelmodellagen ab 18 Jahren
         </p>
+        <div className="mt-12 text-center">
+          <CtaButton />
+        </div>
 
         <div className="mt-24 grid items-center gap-12 md:grid-cols-2">
           <div>
@@ -454,11 +460,11 @@ function Booking() {
       <div className="mx-auto max-w-3xl rounded-[2rem] bg-foreground px-8 py-20 text-center text-background shadow-elegant md:px-16">
         <p className="text-xs uppercase tracking-[0.35em] text-rose">Termin</p>
         <h2 className="mt-5 font-serif text-4xl leading-tight md:text-5xl">
-          Bereit für deine schönsten Nägel?
+          Bereit für gepflegte, natürliche Nägel?
         </h2>
         <div className="mx-auto my-8 h-px w-16 bg-gold" />
         <p className="mx-auto max-w-md text-base font-light text-background/70">
-          Sichere dir jetzt deinen privaten Termin in Wien.
+          Sichere dir jetzt deinen Termin für gepflegte, natürliche Nägel in Wien.
         </p>
         <a
           href="https://example.com/booking"
@@ -466,8 +472,11 @@ function Booking() {
           rel="noopener noreferrer"
           className="mt-10 inline-block rounded-full bg-rose px-10 py-4 text-xs uppercase tracking-[0.25em] text-primary-foreground transition hover:bg-rose-deep"
         >
-          Jetzt Termin buchen
+          Jetzt Termin sichern
         </a>
+        <p className="mt-5 text-xs uppercase tracking-[0.3em] text-background/50">
+          Wien 1010 — Nähe Schwarzenbergplatz
+        </p>
       </div>
     </section>
   );
