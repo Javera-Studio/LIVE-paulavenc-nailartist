@@ -329,7 +329,7 @@ function Info() {
   );
 }
 
-function Contact() {
+function Hours() {
   const hours = [
     { day: "Montag", time: "11:00 – 20:30", open: true },
     { day: "Dienstag", time: "11:00 – 20:30", open: true },
@@ -340,50 +340,37 @@ function Contact() {
     { day: "Sonntag", time: "Wir haben geschlossen", open: false },
   ];
   return (
-    <section id="kontakt" className="px-6 py-24 md:px-10 md:py-32">
-      <div className="mx-auto grid max-w-5xl gap-14 md:grid-cols-2">
-        <div>
-          <p className="text-xs uppercase tracking-[0.35em] text-rose">Adresse</p>
-          <div className="gold-divider my-6" />
-          <address className="not-italic text-base font-light leading-relaxed text-foreground/85">
-            Fichtegasse 7<br />
-            1. Bezirk<br />
-            Wien<br />
-            1010
-          </address>
-          <div className="mt-8 space-y-4 text-sm font-light">
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Jetzt anrufen</p>
-              <a href="tel:+436642215398" className="mt-1 inline-block text-foreground underline-offset-4 transition hover:text-rose hover:underline">
-                0664 2215398
-              </a>
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">E-Mail schreiben</p>
-              <a href="mailto:office@paulavenc.at" className="mt-1 inline-block text-foreground underline-offset-4 transition hover:text-rose hover:underline">
-                office@paulavenc.at
-              </a>
-            </div>
-          </div>
+    <section
+      id="oeffnungszeiten"
+      className="px-6 py-24 md:px-10 md:py-32"
+      style={{ backgroundColor: "color-mix(in oklab, var(--rose) 28%, white)" }}
+    >
+      <div className="mx-auto max-w-3xl">
+        <div className="text-center">
+          <p className="text-xs uppercase tracking-[0.35em] text-rose-deep">Termine</p>
+          <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">Öffnungszeiten</h2>
+          <div className="mx-auto gold-divider my-8" />
         </div>
-        <div>
-          <h3 className="text-right font-serif text-3xl text-foreground md:text-4xl">Kontakt</h3>
-          <div className="ml-auto gold-divider my-6" />
-          <ul className="space-y-3 text-sm font-light">
-            {hours.map((h) => (
-              <li key={h.day} className="grid grid-cols-[14px_1fr_auto] items-center gap-4">
-                <span
-                  className={
-                    "h-2.5 w-2.5 rounded-full " + (h.open ? "bg-foreground" : "border border-foreground/40")
-                  }
-                  aria-hidden="true"
-                />
-                <span className="text-foreground/85">{h.day}</span>
-                <span className={h.open ? "text-foreground/85" : "text-muted-foreground"}>{h.time}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="mx-auto max-w-lg space-y-3 text-sm font-light">
+          {hours.map((h) => (
+            <li
+              key={h.day}
+              className="grid grid-cols-[14px_1fr_auto] items-center gap-4 border-b border-foreground/10 pb-3"
+            >
+              <span
+                className={
+                  "h-2.5 w-2.5 rounded-full " +
+                  (h.open ? "bg-foreground" : "border border-foreground/40")
+                }
+                aria-hidden="true"
+              />
+              <span className="text-foreground/85">{h.day}</span>
+              <span className={h.open ? "text-foreground/85" : "text-muted-foreground"}>
+                {h.time}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
