@@ -192,7 +192,7 @@ function Stars() {
 function Trust() {
   const testimonials = [
     { text: "Perfekte Nägel – wie immer! Komme seit Jahren und bin jedes Mal begeistert.", name: "Ursula" },
-    { text: "Alles perfekt! Super Nägel, angenehme Atmosphäre – komme wieder 😊", name: "Ursula" },
+    { text: "Sauber, hygienisch, arbeitet sehr genau!", name: "Natascha" },
     { text: "Ich war anfangs skeptisch, aber das Ergebnis ist einfach wunderschön. So präzise und sauber gearbeitet – ich liebe meine Nägel!", name: "Sabrina" },
     { text: "Super Maniküristin – die japanische Maniküre sieht toll aus.", name: "Miriam" },
     { text: "Excellent service, with great care and attention to detail. Definitely recommended!", name: "Francesca" },
