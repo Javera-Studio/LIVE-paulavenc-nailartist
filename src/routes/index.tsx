@@ -63,46 +63,54 @@ function CtaButton({ children = "Jetzt Termin sichern", className = "" }: { chil
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden bg-background pt-28 pb-20 md:pt-32 md:pb-28">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2 md:px-10">
-        <div className="fade-up">
-          <p className="mb-6 text-xs uppercase tracking-[0.35em] text-rose">Private Nailartist · Wien 1010</p>
-          <h1 className="font-serif text-5xl leading-[1.05] text-foreground md:text-6xl lg:text-[4.25rem]">
-            Natürliche Gelnägel & Russian Manicure in Wien <span className="text-rose">(1010)</span>
+    <section
+      id="top"
+      className="relative isolate flex min-h-[100svh] items-center justify-center overflow-hidden bg-background"
+    >
+      <img
+        src={heroNails}
+        alt="Natürliche Gelnägel in Nude-Tönen – Paula Venc Wien 1010"
+        className="absolute inset-0 -z-20 h-full w-full object-cover hero-zoom"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "linear-gradient(180deg, color-mix(in oklab, white 70%, transparent) 0%, color-mix(in oklab, white 55%, transparent) 45%, color-mix(in oklab, var(--nude) 60%, transparent) 100%)",
+        }}
+      />
+      <div className="mx-auto w-full max-w-3xl px-6 py-32 text-center md:px-10 md:py-40">
+        <div className="hero-fade">
+          <p className="text-[11px] uppercase tracking-[0.4em] text-rose">
+            Private Nailartist · Wien 1010
+          </p>
+          <h1 className="mt-6 font-serif text-4xl leading-[1.08] text-foreground md:text-6xl lg:text-[4.25rem]">
+            Natürliche Gelnägel & Russian Manicure in Wien{" "}
+            <span className="text-rose">(1010)</span>
           </h1>
-          <div className="gold-divider my-8" />
-          <p className="max-w-md text-lg font-light leading-relaxed text-muted-foreground">
+          <div className="gold-divider mx-auto my-8" />
+          <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-foreground/80">
             Präzise, saubere Nagelarbeit – in ruhiger, privater Atmosphäre.
           </p>
-          <p className="mt-4 max-w-md text-sm font-light text-foreground/70">
+          <p className="mx-auto mt-4 max-w-lg text-sm font-light text-foreground/70">
             <span className="text-gold">✦</span> &nbsp; Nur eine Kundin pro Termin – volle Aufmerksamkeit für dich.
           </p>
-          <div className="mt-10 flex flex-col items-start gap-3">
-            <div className="flex flex-wrap items-center gap-4">
-              <CtaButton />
-              <a
-                href="#services"
-                className="rounded-full border border-foreground/15 px-8 py-4 text-xs uppercase tracking-[0.25em] text-foreground/80 transition hover:border-rose hover:text-rose"
-              >
-                Leistungen ansehen
-              </a>
-            </div>
+          <p className="mt-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            <span className="text-gold">★</span> 5.0 Bewertung — über 650 zufriedene Kundinnen
+          </p>
+          <div className="mt-10 flex flex-col items-center gap-3">
+            <CtaButton />
             <p className="text-xs italic font-light text-muted-foreground">
               Beliebte Termine schnell vergeben.
             </p>
           </div>
         </div>
-        <div className="relative">
-          <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-nude" />
-          <img
-            src={heroNails}
-            alt="Elegante natürliche Maniküre in Nude-Tönen – Paula Venc Wien 1010"
-            width={1536}
-            height={1280}
-            className="aspect-[4/5] w-full rounded-[1.5rem] object-cover shadow-elegant"
-          />
-        </div>
       </div>
+      <div
+        aria-hidden="true"
+        className="absolute bottom-0 left-1/2 h-px w-40 -translate-x-1/2 bg-gradient-to-r from-transparent via-gold to-transparent"
+      />
     </section>
   );
 }
