@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroNails from "@/assets/hero-nails.jpg";
-import aboutArtist from "@/assets/about-artist.jpg";
+import aboutArtist from "@/assets/paula-portrait.png";
+import logo from "@/assets/logo-paula-venc.jpg";
+import nailLengths from "@/assets/nagellaenge.png";
 import g1 from "@/assets/gallery-1.jpg";
 import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
@@ -18,8 +20,11 @@ function Nav() {
   return (
     <header className="absolute top-0 left-0 right-0 z-20">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10">
-        <a href="#top" className="font-serif text-xl tracking-wide text-foreground">
-          Paula <span className="text-rose">Venc</span>
+        <a href="#top" className="flex items-center gap-3">
+          <img src={logo} alt="Paula Venc Nagelstudio" className="h-10 w-10 rounded-full object-cover" />
+          <span className="font-serif text-xl tracking-wide text-foreground">
+            Paula <span className="text-rose">Venc</span>
+          </span>
         </a>
         <ul className="hidden items-center gap-10 text-sm font-light text-foreground/80 md:flex">
           <li><a href="#services" className="transition hover:text-rose">Leistungen</a></li>
@@ -139,6 +144,34 @@ function Services() {
               <p className="mt-5 text-sm font-light leading-relaxed text-muted-foreground">{s.desc}</p>
             </article>
           ))}
+        </div>
+        <p className="mt-10 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          <span className="text-gold">✦</span> &nbsp; Nagelmodellagen ab 18 Jahren
+        </p>
+
+        <div className="mt-24 grid items-center gap-12 md:grid-cols-2">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-rose">Nagellänge</p>
+            <h3 className="mt-4 font-serif text-3xl text-foreground md:text-4xl">Finde deine Länge</h3>
+            <div className="gold-divider my-6" />
+            <p className="text-sm font-light leading-relaxed text-muted-foreground">
+              Damit du deine Wunschlänge ganz einfach bestimmen kannst, orientiere dich an
+              unserer Übersicht — gemessen ab der Fingerkuppe.
+            </p>
+            <ul className="mt-6 space-y-2 text-sm font-light text-foreground/80">
+              <li><span className="font-serif text-gold">S</span> &nbsp; 0–2 mm ab Fingerkuppe</li>
+              <li><span className="font-serif text-gold">M</span> &nbsp; 3–9 mm ab Fingerkuppe</li>
+              <li><span className="font-serif text-gold">L</span> &nbsp; 1–1,5 cm ab Fingerkuppe</li>
+            </ul>
+          </div>
+          <div className="overflow-hidden rounded-2xl shadow-soft">
+            <img
+              src={nailLengths}
+              alt="Nagellängen S, M, L im Vergleich"
+              loading="lazy"
+              className="w-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
