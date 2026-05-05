@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroNails from "@/assets/hero-nails.jpg";
-import aboutArtist from "@/assets/about-artist.jpg";
+import aboutArtist from "@/assets/paula-portrait.png";
+import logo from "@/assets/logo-paula-venc.jpg";
+import nailLengths from "@/assets/nagellaenge.png";
 import g1 from "@/assets/gallery-1.jpg";
 import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
