@@ -127,11 +127,16 @@ function VideoShowcase() {
     <section className="bg-background pb-20 md:pb-28">
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <div className="relative overflow-hidden rounded-[1.75rem] shadow-elegant">
-          <img
-            src={g1}
-            alt="Close-up natürlicher, glänzender Gelnägel"
+          <video
+            src={showcaseVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
             className="aspect-[16/9] w-full object-cover"
           />
+
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-rose/10 via-transparent to-nude/20" />
         </div>
         <p className="mt-5 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
