@@ -145,6 +145,34 @@ function Services() {
             </article>
           ))}
         </div>
+        <p className="mt-10 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          <span className="text-gold">✦</span> &nbsp; Nagelmodellagen ab 18 Jahren
+        </p>
+
+        <div className="mt-24 grid items-center gap-12 md:grid-cols-2">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-rose">Nagellänge</p>
+            <h3 className="mt-4 font-serif text-3xl text-foreground md:text-4xl">Finde deine Länge</h3>
+            <div className="gold-divider my-6" />
+            <p className="text-sm font-light leading-relaxed text-muted-foreground">
+              Damit du deine Wunschlänge ganz einfach bestimmen kannst, orientiere dich an
+              unserer Übersicht — gemessen ab der Fingerkuppe.
+            </p>
+            <ul className="mt-6 space-y-2 text-sm font-light text-foreground/80">
+              <li><span className="font-serif text-gold">S</span> &nbsp; 0–2 mm ab Fingerkuppe</li>
+              <li><span className="font-serif text-gold">M</span> &nbsp; 3–9 mm ab Fingerkuppe</li>
+              <li><span className="font-serif text-gold">L</span> &nbsp; 1–1,5 cm ab Fingerkuppe</li>
+            </ul>
+          </div>
+          <div className="overflow-hidden rounded-2xl shadow-soft">
+            <img
+              src={nailLengths}
+              alt="Nagellängen S, M, L im Vergleich"
+              loading="lazy"
+              className="w-full object-cover"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
