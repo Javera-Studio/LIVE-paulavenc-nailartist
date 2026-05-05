@@ -95,13 +95,13 @@ function Hero() {
       />
       <div className="mx-auto w-full max-w-3xl px-6 py-32 text-center md:px-10 md:py-40">
         <div className="hero-fade">
-          <p className="text-[11px] uppercase tracking-[0.4em] text-rose drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]">
+          <p className="text-[11px] uppercase tracking-[0.4em] text-rose drop-shadow-[0_1px_2px_rgba(255,255,255,0.4)]">
             Private Nailartist · Wien 1010
           </p>
-          <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] md:text-5xl lg:text-6xl">
+          <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-[#1a1208] drop-shadow-[0_1px_2px_rgba(255,255,255,0.35)] md:text-5xl lg:text-6xl">
             Deine Auszeit für perfekte, natürliche Nägel
           </h1>
-          <p className="mx-auto mt-4 max-w-xl font-serif text-xl text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.4)] md:text-2xl">
+          <p className="mx-auto mt-4 max-w-xl font-serif text-xl text-[#3a2a1f]/90 drop-shadow-[0_1px_2px_rgba(255,255,255,0.3)] md:text-2xl">
             In privater Atmosphäre – mit voller Aufmerksamkeit nur für dich
           </p>
           <div className="gold-divider mx-auto my-8" />
