@@ -14,6 +14,10 @@ import g6 from "@/assets/gallery-6.jpg";
 import g7 from "@/assets/gallery-7.jpg";
 import g8 from "@/assets/gallery-8.jpg";
 import g9 from "@/assets/gallery-9.jpg";
+import studio1 from "@/assets/studio-1.jpg";
+import studio2 from "@/assets/studio-2.jpg";
+import studio3 from "@/assets/studio-3.jpg";
+import studio4 from "@/assets/studio-4.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -445,6 +449,55 @@ function Info() {
   );
 }
 
+function Studio() {
+  const images = [
+    { src: studio1, alt: "Empfangsbereich des Studios mit zarten Roséˇtönen" },
+    { src: studio2, alt: "Eingang und Treppe zum Studio" },
+    { src: studio3, alt: "Arbeitsplatz mit Nagellack-Wand" },
+    { src: studio4, alt: "Detailansicht des Behandlungsplatzes" },
+  ];
+  return (
+    <section id="studio" className="bg-background py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6 md:px-10">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-xs uppercase tracking-[0.35em] text-rose">Studio & Atmosphäre</p>
+          <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">
+            Dein Termin in ruhiger, privater Atmosphäre
+          </h2>
+          <div className="mx-auto gold-divider my-8" />
+          <p className="text-base font-light leading-relaxed text-muted-foreground">
+            Während deines Termins ist keine weitere Kundin im Studio – so kannst du dich ganz entspannt auf dich konzentrieren und die Zeit genießen.
+          </p>
+        </div>
+
+        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className="overflow-hidden rounded-2xl bg-nude shadow-soft transition duration-500 hover:shadow-elegant"
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                className="aspect-[4/5] w-full object-cover transition duration-700 hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-12 text-center font-serif text-lg italic text-foreground/80 md:text-xl">
+          Private Atmosphäre – keine Hektik, keine Wartezeiten
+        </p>
+
+        <div className="mt-10 flex justify-center">
+          <CtaButton />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Hours() {
   const hours = [
     { day: "Montag", time: "11:00 – 20:30", open: true },
@@ -613,6 +666,7 @@ function Index() {
       <Trust />
       <Services />
       <Gallery />
+      <Studio />
       <Hours />
       <Booking />
       <Footer />
