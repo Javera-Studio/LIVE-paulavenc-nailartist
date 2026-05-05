@@ -1,3 +1,4 @@
+import type * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import heroNails from "@/assets/hero-nails.jpg";
 import aboutArtist from "@/assets/paula-portrait.png";
@@ -547,6 +548,8 @@ function Index() {
     <main className="min-h-screen bg-background">
       <Nav />
       <Hero />
+      <VideoShowcase />
+      <USP />
       <Trust />
       <Services />
       <Gallery />
