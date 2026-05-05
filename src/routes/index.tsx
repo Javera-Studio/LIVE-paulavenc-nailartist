@@ -367,21 +367,55 @@ function Booking() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-12 text-sm font-light text-muted-foreground md:flex-row md:px-10">
-        <div className="text-center md:text-left">
-          <p className="font-serif text-lg text-foreground">Paula Venc</p>
-          <p className="mt-1 text-xs uppercase tracking-[0.3em]">Private Nailartist · Vienna</p>
+    <footer className="border-t border-border bg-foreground text-background/80">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-3 md:px-10">
+        <div>
+          <p className="font-serif text-xl text-background">Paula Venc</p>
+          <p className="mt-2 text-xs uppercase tracking-[0.3em] text-background/60">
+            Private Nailartist · Vienna
+          </p>
         </div>
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs uppercase tracking-[0.3em] transition hover:text-rose"
-        >
-          Instagram @paulavenc
-        </a>
-        <p className="text-xs">© {new Date().getFullYear()} Paula Venc</p>
+        <div className="space-y-2 text-sm font-light">
+          <p className="text-xs uppercase tracking-[0.3em] text-background/60">Kontakt</p>
+          <a href="tel:+436642215398" className="block transition hover:text-rose">0664 2215398</a>
+          <a href="mailto:office@paulavenc.at" className="block transition hover:text-rose">
+            office@paulavenc.at
+          </a>
+        </div>
+        <div className="md:text-right">
+          <p className="text-xs uppercase tracking-[0.3em] text-background/60">Folge mir</p>
+          <div className="mt-3 flex gap-4 md:justify-end">
+            <a
+              href="https://www.instagram.com/paula.venc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-background/20 transition hover:border-rose hover:text-rose"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/Paula-Venc-Private-Nailartist"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-background/20 transition hover:border-rose hover:text-rose"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.6V4.2c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.6H7.6V14h2.7v8h3.2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-background/10">
+        <p className="mx-auto max-w-7xl px-6 py-5 text-xs text-background/50 md:px-10">
+          © {new Date().getFullYear()} Paula Venc — Private Nailartist
+        </p>
       </div>
     </footer>
   );
