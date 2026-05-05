@@ -153,7 +153,7 @@ function USP() {
   const items = [
     { t: "Private Atmosphäre", d: "Keine andere Kundin gleichzeitig — du hast den Raum für dich." },
     { t: "Präzise & sauber", d: "Russian Manicure mit höchster Genauigkeit und sterilen Werkzeugen." },
-    { t: "Natürliche Eleganz", d: "Fokus auf zarte, alltagstaugliche Designs in Nude- und Roséˇtönen." },
+    { t: "Natürliche Eleganz", d: "Fokus auf zarte, alltagstaugliche Designs in Nude- und Rosétönen." },
     { t: "Über 650 Kundinnen", d: "Vertrauen aus Jahren Erfahrung — viele kommen seit dem ersten Termin wieder." },
   ];
   return (
