@@ -148,33 +148,79 @@ function Trust() {
 }
 
 function Services() {
-  const items = [
-    { title: "Neues Set", desc: "Aufbau eines neuen, natürlich wirkenden Nagelmodells — perfekt angepasst an deine Form." },
-    { title: "Auffüllen", desc: "Pflege und Erhalt deines bestehenden Sets, für ein dauerhaft schönes Ergebnis." },
-    { title: "Designs", desc: "Dezente Akzente, French oder feine Goldlinien — minimal und elegant." },
+  const categories = [
+    {
+      title: "Neues Set",
+      items: [
+        { name: "Neues Set mit Gel / Polygel / Rubber Base — S/M", price: "ab 90 €" },
+        { name: "Neues Set mit Gel / Polygel / Rubber Base — L", price: "ab 100 €" },
+      ],
+    },
+    {
+      title: "Auffüllen",
+      items: [
+        { name: "Auffüllen — S/M", price: "ab 90 €" },
+        { name: "Auffüllen — L", price: "ab 100 €" },
+      ],
+    },
+    {
+      title: "Maniküre",
+      items: [
+        { name: "Russische Maniküre ohne Lack", price: "50 €" },
+        { name: "Japanische Maniküre", price: "60 €" },
+        { name: "Russische Maniküre + Entfernung", price: "75 €" },
+      ],
+    },
+    {
+      title: "Extras",
+      items: [
+        { name: "Easy Design", price: "ab 5 €" },
+        { name: "Chrome Powder", price: "10 €" },
+      ],
+    },
   ];
   return (
-    <section id="services" className="py-24 md:py-32">
+    <section id="services" className="bg-nude/40 py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-rose">Leistungen</p>
-          <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">Schlicht. Hochwertig. Persönlich.</h2>
+          <p className="text-xs uppercase tracking-[0.35em] text-rose">Preise</p>
+          <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">Leistungen & Preise</h2>
           <div className="mx-auto gold-divider my-8" />
+          <p className="text-sm font-light leading-relaxed text-muted-foreground">
+            Klare Preise für hochwertige, natürliche Ergebnisse.
+          </p>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {items.map((s, i) => (
+
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
+          {categories.map((cat, i) => (
             <article
-              key={s.title}
-              className="group relative rounded-2xl border border-border bg-card p-10 transition hover:border-rose hover:shadow-soft"
+              key={cat.title}
+              className="rounded-2xl bg-background p-8 shadow-soft transition hover:shadow-elegant md:p-10"
             >
-              <span className="font-serif text-sm text-gold">0{i + 1}</span>
-              <h3 className="mt-4 font-serif text-2xl text-foreground">{s.title}</h3>
-              <div className="mt-4 h-px w-10 bg-border transition group-hover:bg-rose" />
-              <p className="mt-5 text-sm font-light leading-relaxed text-muted-foreground">{s.desc}</p>
+              <div className="flex items-baseline justify-between">
+                <h3 className="font-serif text-2xl text-foreground md:text-3xl">{cat.title}</h3>
+                <span className="font-serif text-sm text-gold">0{i + 1}</span>
+              </div>
+              <div className="gold-divider mt-4 mb-6" />
+              <ul className="divide-y divide-border/70">
+                {cat.items.map((it) => (
+                  <li
+                    key={it.name}
+                    className="flex items-baseline justify-between gap-6 py-3 text-sm font-light"
+                  >
+                    <span className="text-foreground/85">{it.name}</span>
+                    <span className="whitespace-nowrap font-serif text-base text-rose">{it.price}</span>
+                  </li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
-        <p className="mt-10 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
+
+        <p className="mt-10 text-center text-xs italic font-light text-muted-foreground">
+          Die Preise können je nach Aufwand variieren.
+        </p>
+        <p className="mt-3 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
           <span className="text-gold">✦</span> &nbsp; Nagelmodellagen ab 18 Jahren
         </p>
 
