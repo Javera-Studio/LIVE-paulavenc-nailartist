@@ -388,6 +388,11 @@ function Gallery() {
           <CtaButton />
         </div>
       </div>
+    </section>
+  );
+}
+
+function About() {
   return (
     <section id="about" className="py-24 md:py-32">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 md:grid-cols-2 md:px-10">
