@@ -5,6 +5,7 @@ import aboutArtist from "@/assets/paula-portrait.png";
 import logo from "@/assets/logo-paula-venc.jpg";
 import nailLengths from "@/assets/nagellaenge.png";
 import g1 from "@/assets/gallery-1.jpg";
+import showcaseVideo from "@/assets/showcase.mp4?url";
 import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
