@@ -144,6 +144,9 @@ function VideoShowcase() {
         <p className="mt-5 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
           Nagelstudio in Wien, 1010 — Nähe Schwarzenbergplatz
         </p>
+        <div className="mt-10 flex justify-center">
+          <CtaButton />
+        </div>
       </div>
     </section>
   );
@@ -178,6 +181,9 @@ function USP() {
               <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">{it.d}</p>
             </article>
           ))}
+        </div>
+        <div className="mt-14 flex justify-center">
+          <CtaButton />
         </div>
       </div>
     </section>
@@ -378,6 +384,9 @@ function Gallery() {
             </div>
           ))}
         </div>
+        <div className="mt-14 flex justify-center">
+          <CtaButton />
+        </div>
       </div>
     </section>
   );
@@ -414,6 +423,9 @@ function About() {
           <p className="mt-5 text-base font-light leading-relaxed text-muted-foreground">
             Mit viel Sorgfalt und einem Auge fürs Detail entstehen so Nägel, die Persönlichkeit unterstreichen und sich natürlich in den Alltag einfügen.
           </p>
+          <div className="mt-10">
+            <CtaButton />
+          </div>
         </div>
       </div>
     </section>
@@ -475,6 +487,9 @@ function Hours() {
             </li>
           ))}
         </ul>
+        <div className="mt-12 flex justify-center">
+          <CtaButton />
+        </div>
       </div>
     </section>
   );
