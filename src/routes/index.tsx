@@ -77,7 +77,15 @@ function Hero() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(180deg, color-mix(in oklab, white 70%, transparent) 0%, color-mix(in oklab, white 55%, transparent) 45%, color-mix(in oklab, var(--nude) 60%, transparent) 100%)",
+            "linear-gradient(180deg, color-mix(in oklab, white 55%, transparent) 0%, color-mix(in oklab, white 35%, transparent) 45%, color-mix(in oklab, var(--nude) 45%, transparent) 100%)",
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "linear-gradient(180deg, transparent 0%, color-mix(in oklab, black 18%, transparent) 100%)",
         }}
       />
       <div className="mx-auto w-full max-w-3xl px-6 py-32 text-center md:px-10 md:py-40">
@@ -85,16 +93,15 @@ function Hero() {
           <p className="text-[11px] uppercase tracking-[0.4em] text-rose">
             Private Nailartist · Wien 1010
           </p>
-          <h1 className="mt-6 font-serif text-4xl leading-[1.08] text-foreground md:text-6xl lg:text-[4.25rem]">
-            Natürliche Gelnägel & Russian Manicure in Wien{" "}
-            <span className="text-rose">(1010)</span>
+          <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-foreground md:text-5xl lg:text-6xl">
+            Deine Auszeit für perfekte, natürliche Nägel
           </h1>
-          <div className="gold-divider mx-auto my-8" />
-          <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-foreground/80">
-            Präzise, saubere Nagelarbeit – in ruhiger, privater Atmosphäre.
+          <p className="mx-auto mt-4 max-w-xl font-serif text-xl text-foreground/85 md:text-2xl">
+            In privater Atmosphäre – mit voller Aufmerksamkeit nur für dich
           </p>
-          <p className="mx-auto mt-4 max-w-lg text-sm font-light text-foreground/70">
-            <span className="text-gold">✦</span> &nbsp; Nur eine Kundin pro Termin – volle Aufmerksamkeit für dich.
+          <div className="gold-divider mx-auto my-8" />
+          <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-foreground/85">
+            Natürliche Gelnägel & Russian Manicure in Wien
           </p>
           <p className="mt-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
             <span className="text-gold">★</span> 5.0 Bewertung — über 650 zufriedene Kundinnen
