@@ -586,10 +586,10 @@ function Index() {
       <Hero />
       <VideoShowcase />
       <USP />
+      <About />
       <Trust />
       <Services />
       <Gallery />
-      <About />
       <Hours />
       <Booking />
       <Footer />
