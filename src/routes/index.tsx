@@ -397,6 +397,7 @@ function Index() {
       <Gallery />
       <About />
       <Info />
+      <Contact />
       <Booking />
       <Footer />
     </main>
