@@ -412,8 +412,12 @@ function Footer() {
           </p>
         </div>
         <div className="space-y-2 text-sm font-light">
-          <p className="text-xs uppercase tracking-[0.3em] text-background/60">Kontakt</p>
-          <a href="tel:+436642215398" className="block transition hover:text-rose">0664 2215398</a>
+          <p className="text-xs uppercase tracking-[0.3em] text-background/60">Adresse</p>
+          <address className="not-italic leading-relaxed text-background/85">
+            Fichtegasse 7<br />
+            1. Bezirk, 1010 Wien
+          </address>
+          <a href="tel:+436642215398" className="block pt-2 transition hover:text-rose">0664 2215398</a>
           <a href="mailto:office@paulavenc.at" className="block transition hover:text-rose">
             office@paulavenc.at
           </a>
@@ -466,8 +470,7 @@ function Index() {
       <Services />
       <Gallery />
       <About />
-      
-      <Contact />
+      <Hours />
       <Booking />
       <Footer />
     </main>
