@@ -660,7 +660,7 @@ function Index() {
     <main className="min-h-screen bg-background pb-16 md:pb-0">
       <Nav />
       <Hero />
-      <VideoShowcase />
+      
       <USP />
       <About />
       <Trust />
