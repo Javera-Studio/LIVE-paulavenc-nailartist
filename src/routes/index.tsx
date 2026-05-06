@@ -113,7 +113,7 @@ function Hero() {
           </p>
           <div className="mt-10 flex flex-col items-center gap-3">
             <CtaButton />
-            <p className="text-xs italic font-light text-muted-foreground">
+            <p className="text-xs italic font-light text-slate-800">
               Beliebte Termine schnell vergeben.
             </p>
           </div>
