@@ -416,16 +416,16 @@ function About() {
           <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">Hi, ich bin Paula.</h2>
           <div className="gold-divider my-8" />
           <p className="text-base font-light leading-relaxed text-muted-foreground">
-            Paula ist seit 2018 Nageldesignerin in Wien und spezialisiert sich auf kurze, natürliche Gelnägel sowie Russian Manicure.
+            Seit 2018 arbeite ich als Nageldesignerin in Wien und habe mich auf kurze, natürliche Gelnägel sowie Russian Manicure spezialisiert.
           </p>
           <p className="mt-5 text-base font-light leading-relaxed text-muted-foreground">
-            Als private Nailartist legt sie besonderen Wert auf präzise, saubere Arbeit und ein Ergebnis, das natürlich wirkt und perfekt zum Alltag passt.
+            Als private Nailartist lege ich besonderen Wert auf präzise, saubere Arbeit und ein Ergebnis, das natürlich wirkt und perfekt zum Alltag passt.
           </p>
           <p className="mt-5 text-base font-light leading-relaxed text-muted-foreground">
-            Dabei folgt sie einer klaren Philosophie: Perfektion bedeutet nicht, makellos zu sein, sondern das Beste aus jedem Detail herauszuholen.
+            Dabei verfolge ich eine klare Philosophie: Perfektion bedeutet für mich nicht, makellos zu sein, sondern das Beste aus jedem Detail herauszuholen.
           </p>
           <p className="mt-5 text-base font-light leading-relaxed text-muted-foreground">
-            Mit viel Sorgfalt und einem Auge fürs Detail entstehen so Nägel, die Persönlichkeit unterstreichen und sich natürlich in den Alltag einfügen.
+            Mit viel Sorgfalt und Liebe zum Detail entstehen so Nägel, die Persönlichkeit unterstreichen und sich natürlich und elegant anfühlen.
           </p>
           <div className="mt-10">
             <CtaButton />
