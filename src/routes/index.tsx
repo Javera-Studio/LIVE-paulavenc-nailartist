@@ -108,7 +108,7 @@ function Hero() {
           <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-foreground/85">
             Natürliche Gelnägel & Russian Manicure in Wien
           </p>
-          <p className="mt-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="mt-3 text-xs uppercase tracking-[0.3em] text-slate-600 font-semibold">
             <span className="text-gold">★</span> 5.0 Bewertung — über 650 zufriedene Kundinnen
           </p>
           <div className="mt-10 flex flex-col items-center gap-3">
