@@ -37,7 +37,7 @@ function ImpressumPage() {
           <div>
             <p>
               E-Mail:{" "}
-              <span className="text-muted-foreground">[ihre Mail einfügen]</span>
+              <a href="mailto:office@paulavenc.at" className="text-foreground transition hover:text-rose">office@paulavenc.at</a>
             </p>
           </div>
         </div>
