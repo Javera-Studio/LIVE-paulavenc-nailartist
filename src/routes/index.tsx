@@ -101,7 +101,7 @@ function Hero() {
           <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-[#0a0604] drop-shadow-[0_1px_3px_rgba(255,255,255,0.45)] md:text-5xl lg:text-6xl">
             Deine Auszeit für perfekte, natürliche Nägel
           </h1>
-          <p className="mx-auto mt-4 max-w-xl whitespace-pre-line font-serif text-xl drop-shadow-[0_1px_3px_rgba(255,255,255,0.35)] md:text-2xl shadow-md text-stone-800">
+          <p className="mx-auto mt-4 max-w-xl whitespace-pre-line font-serif text-xl drop-shadow-[0_1px_3px_rgba(255,255,255,0.35)] md:text-2xl shadow-md text-stone-800 bg-red-100 border-none opacity-50 border-0 rounded-full">
             {"In privater Atmosphäre –\nmit voller Aufmerksamkeit nur für dich"}
           </p>
           <div className="gold-divider mx-auto my-8" />
