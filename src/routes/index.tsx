@@ -79,7 +79,7 @@ function Hero() {
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 -z-10 font-normal opacity-50"
         style={{
           background:
             "radial-gradient(ellipse at center, rgba(42, 26, 20, 0.45) 0%, rgba(42, 26, 20, 0.35) 45%, rgba(42, 26, 20, 0.18) 80%, rgba(42, 26, 20, 0.05) 100%)",
@@ -87,7 +87,7 @@ function Hero() {
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 -z-10 font-normal opacity-50"
         style={{
           background:
             "linear-gradient(180deg, rgba(255,255,255,0.18) 0%, transparent 30%, transparent 70%, color-mix(in oklab, var(--nude) 35%, transparent) 100%)",
