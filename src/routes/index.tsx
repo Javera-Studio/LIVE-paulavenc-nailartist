@@ -98,7 +98,7 @@ function Hero() {
           <p className="text-[11px] uppercase tracking-[0.4em] text-rose-100/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
             Private Nailartist · Wien 1010
           </p>
-          <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)] md:text-5xl lg:text-6xl">
+          <h1 className="mt-6 font-serif text-4xl leading-[1.1] drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)] md:text-5xl lg:text-6xl text-slate-200">
             Deine Auszeit für perfekte, natürliche Nägel
           </h1>
           <p className="mx-auto mt-8 max-w-xl whitespace-pre-line font-serif text-lg leading-[1.7] text-white/95 drop-shadow-[0_1px_4px_rgba(0,0,0,0.55)] md:text-xl md:leading-[1.7]">
