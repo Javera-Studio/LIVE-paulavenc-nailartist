@@ -79,41 +79,41 @@ function Hero() {
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 font-normal opacity-50"
+        className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(42, 26, 20, 0.45) 0%, rgba(42, 26, 20, 0.35) 45%, rgba(42, 26, 20, 0.18) 80%, rgba(42, 26, 20, 0.05) 100%)",
+            "radial-gradient(ellipse at center, rgba(20, 12, 8, 0.55) 0%, rgba(20, 12, 8, 0.45) 45%, rgba(20, 12, 8, 0.3) 80%, rgba(20, 12, 8, 0.15) 100%)",
         }}
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 font-normal opacity-50"
+        className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(180deg, rgba(255,255,255,0.18) 0%, transparent 30%, transparent 70%, color-mix(in oklab, var(--nude) 35%, transparent) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, transparent 35%, transparent 65%, rgba(0,0,0,0.35) 100%)",
         }}
       />
       <div className="mx-auto w-full max-w-3xl px-6 py-32 text-center md:px-10 md:py-40">
         <div className="hero-fade">
-          <p className="text-[11px] uppercase tracking-[0.4em] text-rose drop-shadow-[0_1px_3px_rgba(0,0,0,0.35)]">
+          <p className="text-[11px] uppercase tracking-[0.4em] text-rose-100/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
             Private Nailartist · Wien 1010
           </p>
-          <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-[#0a0604] drop-shadow-[0_1px_3px_rgba(255,255,255,0.45)] md:text-5xl lg:text-6xl">
+          <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)] md:text-5xl lg:text-6xl">
             Deine Auszeit für perfekte, natürliche Nägel
           </h1>
-          <p className="mx-auto mt-4 max-w-xl whitespace-pre-line font-serif text-xl drop-shadow-[0_1px_3px_rgba(255,255,255,0.35)] md:text-2xl shadow-md text-stone-800 bg-red-100 border-none opacity-50 border-0 rounded-full">
+          <p className="mx-auto mt-8 max-w-xl whitespace-pre-line font-serif text-lg leading-[1.7] text-white/95 drop-shadow-[0_1px_4px_rgba(0,0,0,0.55)] md:text-xl md:leading-[1.7]">
             {"In privater Atmosphäre –\nmit voller Aufmerksamkeit nur für dich"}
           </p>
-          <div className="gold-divider mx-auto my-8" />
-          <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-slate-900">
-            {"\u200B\n"}
-          </p>
-          <p className="mt-3 text-xs uppercase tracking-[0.3em] text-slate-600 font-semibold">
+          <div className="gold-divider mx-auto my-10" />
+          <p className="mt-3 text-sm font-light tracking-wide text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
             <span className="text-gold">★</span> 5.0 Bewertung — über 650 zufriedene Kundinnen
           </p>
-          <div className="mt-10 flex flex-col items-center gap-3">
+          <p className="mt-2 text-[11px] uppercase tracking-[0.3em] text-gold/90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+            Treatwell Top Rated 2023 • 2024 • 2025
+          </p>
+          <div className="mt-12 flex flex-col items-center gap-4">
             <CtaButton />
-            <p className="text-xs italic text-slate-950 font-medium">
+            <p className="text-sm font-light italic text-white/85 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
               Beliebte Termine schnell vergeben.
             </p>
           </div>
