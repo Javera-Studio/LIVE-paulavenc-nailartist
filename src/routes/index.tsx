@@ -28,7 +28,7 @@ const BOOKING_URL = "#booking";
 function Nav() {
   return (
     <header className="absolute top-0 left-0 right-0 z-20">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10 text-red-50">
         <a href="#top" className="flex items-center gap-3">
           <img src={logo} alt="Paula Venc Nagelstudio" className="h-10 w-10 rounded-full object-cover" />
           <span className="font-serif text-xl tracking-wide text-foreground">
