@@ -105,7 +105,7 @@ function Hero() {
             {"In privater Atmosphäre –\nmit voller Aufmerksamkeit nur für dich"}
           </p>
           <div className="gold-divider mx-auto my-8" />
-          <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-foreground/85">
+          <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-slate-900">
             Natürliche Gelnägel & Russian Manicure in Wien
           </p>
           <p className="mt-3 text-xs uppercase tracking-[0.3em] text-slate-600 font-semibold">
