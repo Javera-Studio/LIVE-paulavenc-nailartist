@@ -28,18 +28,18 @@ const BOOKING_URL = "#booking";
 function Nav() {
   return (
     <header className="absolute top-0 left-0 right-0 z-20">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10 text-red-50">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10">
         <a href="#top" className="flex items-center gap-3">
-          <img src={logo} alt="Paula Venc Nagelstudio" className="h-10 w-10 rounded-full object-cover" />
-          <span className="font-serif text-xl tracking-wide text-foreground">
+          <img src={logo} alt="Paula Venc Nagelstudio" className="h-10 w-10 rounded-full object-cover ring-1 ring-white/40 shadow-[0_2px_8px_rgba(0,0,0,0.35)]" />
+          <span className="font-serif text-xl tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.45)]" style={{ color: "#F4E9E3" }}>
             Paula <span className="text-rose">Venc</span>
           </span>
         </a>
-        <ul className="hidden items-center gap-10 text-sm font-light text-foreground/80 md:flex">
-          <li><a href="#services" className="transition hover:text-rose">Leistungen</a></li>
-          <li><a href="#gallery" className="transition hover:text-rose">Galerie</a></li>
-          <li><a href="#about" className="transition hover:text-rose">Über mich</a></li>
-          <li><a href="#booking" className="transition hover:text-rose">Termin</a></li>
+        <ul className="hidden items-center gap-12 text-sm font-normal tracking-[0.08em] md:flex" style={{ color: "#F4E9E3" }}>
+          <li><a href="#services" className="transition hover:text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Leistungen</a></li>
+          <li><a href="#gallery" className="transition hover:text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Galerie</a></li>
+          <li><a href="#about" className="transition hover:text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Über mich</a></li>
+          <li><a href="#booking" className="transition hover:text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Termin</a></li>
         </ul>
         <a
           href={BOOKING_URL}
