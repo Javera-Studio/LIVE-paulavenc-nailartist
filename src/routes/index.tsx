@@ -106,7 +106,7 @@ function Hero() {
           </p>
           <div className="gold-divider mx-auto my-8" />
           <p className="mx-auto max-w-xl text-lg font-light leading-relaxed text-slate-900">
-            Natürliche Gelnägel & Russian Manicure in Wien
+            {"\u200B\n"}
           </p>
           <p className="mt-3 text-xs uppercase tracking-[0.3em] text-slate-600 font-semibold">
             <span className="text-gold">★</span> 5.0 Bewertung — über 650 zufriedene Kundinnen
