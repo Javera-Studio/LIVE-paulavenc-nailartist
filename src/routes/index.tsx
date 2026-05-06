@@ -30,16 +30,42 @@ function Nav() {
     <header className="absolute top-0 left-0 right-0 z-20">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10">
         <a href="#top" className="flex items-center gap-3">
-          <img src={logo} alt="Paula Venc Nagelstudio" className="h-10 w-10 rounded-full object-cover ring-1 ring-white/40 shadow-[0_2px_8px_rgba(0,0,0,0.35)]" />
-          <span className="font-serif text-xl tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.45)]" style={{ color: "#F4E9E3" }}>
+          <img
+            src={logo}
+            alt="Paula Venc Nagelstudio"
+            className="h-10 w-10 rounded-full object-cover ring-1 ring-white/40 shadow-[0_2px_8px_rgba(0,0,0,0.35)]"
+          />
+          <span
+            className="font-serif text-xl tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.45)]"
+            style={{ color: "#F4E9E3" }}
+          >
             Paula <span className="text-rose">Venc</span>
           </span>
         </a>
-        <ul className="hidden items-center gap-12 text-sm font-normal tracking-[0.08em] md:flex" style={{ color: "#F4E9E3" }}>
-          <li><a href="#services" className="transition hover:text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Leistungen</a></li>
-          <li><a href="#gallery" className="transition hover:text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Galerie</a></li>
-          <li><a href="#about" className="transition hover:text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Über mich</a></li>
-          <li><a href="#booking" className="transition hover:text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">Termin</a></li>
+        <ul
+          className="hidden items-center gap-12 text-sm font-normal tracking-[0.08em] md:flex"
+          style={{ color: "#F4E9E3" }}
+        >
+          <li>
+            <a href="#services" className="transition hover:text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+              Leistungen
+            </a>
+          </li>
+          <li>
+            <a href="#gallery" className="transition hover:text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+              Galerie
+            </a>
+          </li>
+          <li>
+            <a href="#about" className="transition hover:text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+              Über mich
+            </a>
+          </li>
+          <li>
+            <a href="#booking" className="transition hover:text-gold drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">
+              Termin
+            </a>
+          </li>
         </ul>
         <a
           href={BOOKING_URL}
@@ -52,7 +78,13 @@ function Nav() {
   );
 }
 
-function CtaButton({ children = "Jetzt Termin sichern", className = "" }: { children?: React.ReactNode; className?: string }) {
+function CtaButton({
+  children = "Jetzt Termin sichern",
+  className = "",
+}: {
+  children?: React.ReactNode;
+  className?: string;
+}) {
   return (
     <a
       href={BOOKING_URL}
@@ -98,7 +130,10 @@ function Hero() {
           <p className="text-[11px] uppercase tracking-[0.4em] text-rose-100/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
             Private Nailartist · Wien 1010
           </p>
-          <h1 className="mt-6 font-serif text-4xl leading-[1.1] drop-shadow-[0_2px_6px_rgba(255,255,255,0.25)] md:text-5xl lg:text-6xl" style={{ color: "#2A1F1B" }}>
+          <h1
+            className="mt-6 font-serif text-4xl leading-[1.1] drop-shadow-[0_2px_6px_rgba(255,255,255,0.25)] md:text-5xl lg:text-6xl"
+            style={{ color: "#2A1F1B" }}
+          >
             Deine Auszeit für perfekte, natürliche Nägel
           </h1>
           <p className="mx-auto mt-8 max-w-xl whitespace-pre-line font-serif text-lg leading-[1.7] text-white/95 drop-shadow-[0_1px_4px_rgba(0,0,0,0.55)] md:text-xl md:leading-[1.7]">
@@ -133,7 +168,9 @@ function VideoShowcase() {
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <div className="relative overflow-hidden rounded-[1.75rem] shadow-elegant">
           <video
-            ref={(el) => { if (el) el.playbackRate = 0.5; }}
+            ref={(el) => {
+              if (el) el.playbackRate = 0.5;
+            }}
             src={showcaseVideo}
             autoPlay
             muted
@@ -210,7 +247,10 @@ function Trust() {
   const testimonials = [
     { text: "Perfekte Nägel – wie immer! Komme seit Jahren und bin jedes Mal begeistert.", name: "Ursula" },
     { text: "Sauber, hygienisch, arbeitet sehr genau!", name: "Natascha" },
-    { text: "Ich war anfangs skeptisch, aber das Ergebnis ist einfach wunderschön. So präzise und sauber gearbeitet – ich liebe meine Nägel!", name: "Sabrina" },
+    {
+      text: "Ich war anfangs skeptisch, aber das Ergebnis ist einfach wunderschön. So präzise und sauber gearbeitet – ich liebe meine Nägel!",
+      name: "Sabrina",
+    },
     { text: "Super Maniküristin – die japanische Maniküre sieht toll aus.", name: "Miriam" },
     { text: "Excellent service, with great care and attention to detail. Definitely recommended!", name: "Francesca" },
     { text: "Die Beste in Wien – immer top Ergebnis und wunderschöne Nägel.", name: "Aleksandra" },
@@ -219,9 +259,7 @@ function Trust() {
     <section className="bg-nude py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 text-center md:px-10">
         <p className="text-xs uppercase tracking-[0.35em] text-rose">Bewertungen</p>
-        <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">
-          Das sagen meine Kundinnen
-        </h2>
+        <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">Das sagen meine Kundinnen</h2>
         <div className="mx-auto gold-divider my-8" />
         <p className="text-sm font-light text-muted-foreground">
           <span className="text-gold">★</span> 5.0 Bewertung — über 650 zufriedene Kundinnen
@@ -312,10 +350,7 @@ function Services() {
               <div className="gold-divider mt-4 mb-6" />
               <ul className="divide-y divide-border/70">
                 {cat.items.map((it) => (
-                  <li
-                    key={it.name}
-                    className="flex items-baseline justify-between gap-6 py-3 text-sm font-light"
-                  >
+                  <li key={it.name} className="flex items-baseline justify-between gap-6 py-3 text-sm font-light">
                     <span className="text-foreground/85">{it.name}</span>
                     <span className="whitespace-nowrap font-serif text-base text-rose">{it.price}</span>
                   </li>
@@ -341,13 +376,19 @@ function Services() {
             <h3 className="mt-4 font-serif text-3xl text-foreground md:text-4xl">Finde deine Länge</h3>
             <div className="gold-divider my-6" />
             <p className="text-sm font-light leading-relaxed text-muted-foreground">
-              Damit du deine Wunschlänge ganz einfach bestimmen kannst, orientiere dich an
-              unserer Übersicht — gemessen ab der Fingerkuppe.
+              Damit du deine Wunschlänge ganz einfach bestimmen kannst, orientiere dich an unserer Übersicht — gemessen
+              ab der Fingerkuppe.
             </p>
             <ul className="mt-6 space-y-2 text-sm font-light text-foreground/80">
-              <li><span className="font-serif text-gold">S</span> &nbsp; 0–2 mm ab Fingerkuppe</li>
-              <li><span className="font-serif text-gold">M</span> &nbsp; 3–9 mm ab Fingerkuppe</li>
-              <li><span className="font-serif text-gold">L</span> &nbsp; 1–1,5 cm ab Fingerkuppe</li>
+              <li>
+                <span className="font-serif text-gold">S</span> &nbsp; 0–2 mm ab Fingerkuppe
+              </li>
+              <li>
+                <span className="font-serif text-gold">M</span> &nbsp; 3–9 mm ab Fingerkuppe
+              </li>
+              <li>
+                <span className="font-serif text-gold">L</span> &nbsp; 1–1,5 cm ab Fingerkuppe
+              </li>
             </ul>
           </div>
           <div className="overflow-hidden rounded-2xl shadow-soft">
@@ -416,16 +457,20 @@ function About() {
           <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">Hi, ich bin Paula.</h2>
           <div className="gold-divider my-8" />
           <p className="text-base font-light leading-relaxed text-muted-foreground">
-            Seit 2018 arbeite ich als Nageldesignerin in Wien und habe mich auf kurze, natürliche Gelnägel sowie Russian Manicure spezialisiert.
+            Seit 2018 arbeite ich als Nageldesignerin in Wien und habe mich auf kurze, natürliche Gelnägel sowie Russian
+            Manicure spezialisiert.
           </p>
           <p className="mt-5 text-base font-light leading-relaxed text-muted-foreground">
-            Als private Nailartist lege ich besonderen Wert auf präzise, saubere Arbeit und ein Ergebnis, das natürlich wirkt und perfekt zum Alltag passt.
+            Als private Nailartist lege ich besonderen Wert auf präzise, saubere Arbeit und ein Ergebnis, das natürlich
+            wirkt und perfekt zum Alltag passt.
           </p>
           <p className="mt-5 text-base font-light leading-relaxed text-muted-foreground">
-            Dabei verfolge ich eine klare Philosophie: Perfektion bedeutet für mich nicht, makellos zu sein, sondern das Beste aus jedem Detail herauszuholen.
+            Dabei verfolge ich eine klare Philosophie: Perfektion bedeutet für mich nicht, makellos zu sein, sondern das
+            Beste aus jedem Detail herauszuholen.
           </p>
           <p className="mt-5 text-base font-light leading-relaxed text-muted-foreground">
-            Mit viel Sorgfalt und Liebe zum Detail entstehen so Nägel, die Persönlichkeit unterstreichen und sich natürlich und elegant anfühlen.
+            Mit viel Sorgfalt und Liebe zum Detail entstehen so Nägel, die Persönlichkeit unterstreichen und sich
+            natürlich und elegant anfühlen.
           </p>
           <div className="mt-10">
             <CtaButton />
@@ -441,8 +486,7 @@ function Info() {
     <section className="px-6 pb-8 md:px-10">
       <div className="mx-auto max-w-3xl rounded-2xl border border-gold/30 bg-nude px-8 py-6 text-center">
         <p className="text-sm font-light tracking-wide text-foreground/80">
-          <span className="font-serif text-gold">✦</span> &nbsp;
-          Nagelmodellagen sind ab 18 Jahren möglich
+          <span className="font-serif text-gold">✦</span> &nbsp; Nagelmodellagen sind ab 18 Jahren möglich
         </p>
       </div>
     </section>
@@ -466,7 +510,8 @@ function Studio() {
           </h2>
           <div className="mx-auto gold-divider my-8" />
           <p className="text-base font-light leading-relaxed text-muted-foreground">
-            Während deines Termins ist keine weitere Kundin im Studio – so kannst du dich ganz entspannt auf dich konzentrieren und die Zeit genießen.
+            Während deines Termins ist keine weitere Kundin im Studio – so kannst du dich ganz entspannt auf dich
+            konzentrieren und die Zeit genießen.
           </p>
         </div>
 
@@ -527,16 +572,11 @@ function Hours() {
               className="grid grid-cols-[14px_1fr_auto] items-center gap-4 border-b border-foreground/10 pb-3"
             >
               <span
-                className={
-                  "h-2.5 w-2.5 rounded-full " +
-                  (h.open ? "bg-foreground" : "border border-foreground/40")
-                }
+                className={"h-2.5 w-2.5 rounded-full " + (h.open ? "bg-foreground" : "border border-foreground/40")}
                 aria-hidden="true"
               />
               <span className="text-foreground/85">{h.day}</span>
-              <span className={h.open ? "text-foreground/85" : "text-muted-foreground"}>
-                {h.time}
-              </span>
+              <span className={h.open ? "text-foreground/85" : "text-muted-foreground"}>{h.time}</span>
             </li>
           ))}
         </ul>
@@ -553,9 +593,7 @@ function Booking() {
     <section id="booking" className="px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto max-w-3xl rounded-[2rem] bg-foreground px-8 py-20 text-center text-background shadow-elegant md:px-16">
         <p className="text-xs uppercase tracking-[0.35em] text-rose">Termin</p>
-        <h2 className="mt-5 font-serif text-4xl leading-tight md:text-5xl">
-          Bereit für gepflegte, natürliche Nägel?
-        </h2>
+        <h2 className="mt-5 font-serif text-4xl leading-tight md:text-5xl">Bereit für gepflegte, natürliche Nägel?</h2>
         <div className="mx-auto my-8 h-px w-16 bg-gold" />
         <p className="mx-auto max-w-md text-base font-light text-background/70">
           Sichere dir jetzt deinen Termin für gepflegte, natürliche Nägel in Wien.
@@ -582,17 +620,17 @@ function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-3 md:px-10">
         <div>
           <p className="font-serif text-xl text-background">Paula Venc</p>
-          <p className="mt-2 text-xs uppercase tracking-[0.3em] text-background/60">
-            Private Nailartist · Vienna
-          </p>
+          <p className="mt-2 text-xs uppercase tracking-[0.3em] text-background/60">Private Nailartist · Vienna</p>
         </div>
         <div className="space-y-2 text-sm font-light">
           <p className="text-xs uppercase tracking-[0.3em] text-background/60">Adresse</p>
           <address className="not-italic leading-relaxed text-background/85">
             Fichtegasse 7<br />
-            1. Bezirk, 1010 Wien
+            1010 Wien
           </address>
-          <a href="tel:+436642215398" className="block pt-2 transition hover:text-rose">0664 2215398</a>
+          <a href="tel:+436642215398" className="block pt-2 transition hover:text-rose">
+            0664 2215398
+          </a>
           <a href="mailto:office@paulavenc.at" className="block transition hover:text-rose">
             office@paulavenc.at
           </a>
@@ -607,7 +645,15 @@ function Footer() {
               aria-label="Instagram"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-background/20 transition hover:border-rose hover:text-rose"
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                aria-hidden="true"
+              >
                 <rect x="3" y="3" width="18" height="18" rx="5" />
                 <circle cx="12" cy="12" r="4" />
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
@@ -660,7 +706,7 @@ function Index() {
     <main className="min-h-screen bg-background pb-16 md:pb-0">
       <Nav />
       <Hero />
-      
+
       <USP />
       <About />
       <Trust />
