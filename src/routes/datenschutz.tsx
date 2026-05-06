@@ -47,7 +47,7 @@ function DatenschutzPage() {
             <p>Fichtegasse 7</p>
             <p>1010 Wien</p>
             <p>
-              E-Mail: <span className="text-muted-foreground">[E-Mail einfügen]</span>
+              E-Mail: <a href="mailto:office@paulavenc.at" className="text-foreground transition hover:text-rose">office@paulavenc.at</a>
             </p>
           </Section>
 
