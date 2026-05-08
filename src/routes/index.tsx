@@ -565,6 +565,9 @@ function Hours() {
           <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">Öffnungszeiten</h2>
           <div className="mx-auto gold-divider my-8" />
         </div>
+        <p className="mt-3 text-sm font-light text-rose-deep/70">
+  Termine nur nach Vereinbarung
+</p>
         <ul className="mx-auto max-w-lg space-y-3 text-sm font-light">
           {hours.map((h) => (
             <li
