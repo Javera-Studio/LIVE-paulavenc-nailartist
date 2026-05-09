@@ -92,7 +92,7 @@ function ImpressumPage() {
             <p>
               Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitbeilegungsplattform
               der EU zu richten:{" "}
-              
+              <a
                 href="http://ec.europa.eu/odr"
                 target="_blank"
                 rel="noopener noreferrer"
