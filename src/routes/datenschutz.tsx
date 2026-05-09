@@ -44,7 +44,7 @@ function DatenschutzPage() {
 
           <Section title="Verantwortliche">
             <p>Paula Venc</p>
-            <p>Fichtegasse 7</p>
+            <p>Schubertring 4/7</p>
             <p>1010 Wien</p>
             <p>
               E-Mail: <a href="mailto:office@paulavenc.at" className="text-foreground transition hover:text-rose">office@paulavenc.at</a>
