@@ -70,7 +70,7 @@ function ImpressumPage() {
             <p><span className="font-medium text-foreground">Mitglied bei:</span> WKO</p>
             <p>
               <span className="font-medium text-foreground">Berufsrecht:</span> Gewerbeordnung:{" "}
-              
+              <a
                 href="http://www.ris.bka.gv.at"
                 target="_blank"
                 rel="noopener noreferrer"
