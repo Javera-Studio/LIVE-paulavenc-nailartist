@@ -70,7 +70,7 @@ function ImpressumPage() {
             <p><span className="font-medium text-foreground">Mitglied bei:</span> WKO</p>
             <p>
               <span className="font-medium text-foreground">Berufsrecht:</span> Gewerbeordnung:{" "}
-              
+              <a
                 href="http://www.ris.bka.gv.at"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -92,7 +92,7 @@ function ImpressumPage() {
             <p>
               Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitbeilegungsplattform
               der EU zu richten:{" "}
-              
+              <a
                 href="http://ec.europa.eu/odr"
                 target="_blank"
                 rel="noopener noreferrer"
