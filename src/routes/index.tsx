@@ -29,11 +29,11 @@ function Nav() {
   return (
     <header className="absolute top-0 left-0 right-0 z-20">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10">
-        <a href="#top" className="flex items-center gap-3">
+        <a href="#top" className="flex items-center gap-5 p-2">
           <img
             src={logo}
             alt="Paula Venc Nagelstudio"
-            className="h-40 w-40 rounded-full object-cover ring-1 ring-white/40 shadow-[0_2px_8px_rgba(0,0,0,0.35)]"
+            className="h-32 w-32 rounded-full object-cover ring-1 ring-white/30 shadow-[0_1px_4px_rgba(0,0,0,0.18)]"
           />
           <span
             className="font-serif text-xl tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.45)]"
