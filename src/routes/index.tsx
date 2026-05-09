@@ -429,6 +429,20 @@ function Gallery() {
             </div>
           ))}
         </div>
+        <a
+          href="https://www.instagram.com/paula.venc/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group mt-14 block overflow-hidden rounded-2xl border border-rose/30 bg-gradient-to-br from-nude via-background to-nude p-8 text-center shadow-soft transition hover:shadow-elegant md:p-10"
+        >
+          <p className="text-xs uppercase tracking-[0.35em] text-rose">Instagram</p>
+          <p className="mt-4 font-serif text-2xl text-foreground md:text-3xl">
+            Entdecke noch mehr natürliche Nail Designs und Einblicke auf meinem Instagram-Profil
+          </p>
+          <span className="mt-6 inline-flex items-center gap-2 text-sm uppercase tracking-[0.3em] text-gold transition group-hover:translate-x-1">
+            @paula.venc →
+          </span>
+        </a>
         <div className="mt-14 flex justify-center">
           <CtaButton />
         </div>
