@@ -298,8 +298,8 @@ function Services() {
     {
       title: "Neues Set",
       items: [
-        { name: "Neues Set mit Gel / Polygel / Rubber Base — S/M", price: "ab 90 €" },
-        { name: "Neues Set mit Gel / Polygel / Rubber Base — L", price: "ab 100 €" },
+        { name: "Neues Set mit Gel / Polygel / Rubber Base — S/M", price: "ab 110 €" },
+        { name: "Neues Set mit Gel / Polygel / Rubber Base — L", price: "ab 120 €" },
       ],
     },
     {
