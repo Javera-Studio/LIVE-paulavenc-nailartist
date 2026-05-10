@@ -530,21 +530,10 @@ function Studio() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {images.map((img, i) => (
-            <div
-              key={i}
-              className="overflow-hidden rounded-2xl bg-nude shadow-soft transition duration-500 hover:shadow-elegant"
-            >
-              <img
-                src={img.src}
-                alt={img.alt}
-                loading="lazy"
-                className="aspect-[4/5] w-full object-cover transition duration-700 hover:scale-105"
-              />
-            </div>
-          ))}
+        <div className="mt-14">
+          <StudioCarousel images={images} />
         </div>
+
 
         <p className="mt-12 text-center font-serif text-lg italic text-foreground/80 md:text-xl">
           Private Atmosphäre – keine Hektik, keine Wartezeiten
