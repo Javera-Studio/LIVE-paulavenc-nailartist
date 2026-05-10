@@ -33,7 +33,7 @@ function Nav() {
           <img
             src={logo}
             alt="Paula Venc Nagelstudio"
-            className="h-32 w-32 rounded-full object-cover ring-1 ring-white/30 shadow-[0_1px_4px_rgba(0,0,0,0.18)]"
+            className="h-20 w-20 sm:h-32 sm:w-32 rounded-full object-cover ring-1 ring-white/30 shadow-[0_1px_4px_rgba(0,0,0,0.18)]"
           />
           <span
             className="font-serif text-xl tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.45)]"
