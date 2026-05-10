@@ -1,18 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export const Route = createFileRoute("/impressum")({
-  head: () => ({
-    meta: [
-      { title: "Impressum — Paula Venc Private Nailartist Wien" },
-      { name: "description", content: "Impressum von Paula Venc, Private Nailartist in Wien 1010." },
-      { property: "og:title", content: "Impressum — Paula Venc" },
-      { property: "og:description", content: "Impressum von Paula Venc, Private Nailartist in Wien 1010." },
-    ],
-  }),
-  component: ImpressumPage,
-});
+export default function ImpressumPage() {
+  useEffect(() => {
+    document.title = "Impressum — Paula Venc Private Nailartist Wien";
+  }, []);
 
-function ImpressumPage() {
   return (
     <main className="min-h-screen bg-background">
       <div className="mx-auto max-w-2xl px-6 py-24 md:px-10 md:py-32">
