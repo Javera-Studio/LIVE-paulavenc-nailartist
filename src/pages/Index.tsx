@@ -1,4 +1,5 @@
-import type * as React from "react";
+import * as React from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroNails from "@/assets/hero-nails.jpg";
 import aboutArtist from "@/assets/paula-portrait.png";
