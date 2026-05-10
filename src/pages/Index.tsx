@@ -508,6 +508,74 @@ function Info() {
   );
 }
 
+function StudioCarousel({ images }: { images: { src: string; alt: string }[] }) {
+  const [index, setIndex] = React.useState(0);
+  const [paused, setPaused] = React.useState(false);
+  const count = images.length;
+
+  React.useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => setIndex((i) => (i + 1) % count), 6000);
+    return () => clearInterval(id);
+  }, [paused, count]);
+
+  const go = (i: number) => setIndex((i + count) % count);
+
+  return (
+    <div
+      className="relative mx-auto w-full max-w-5xl"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-nude shadow-elegant sm:aspect-[16/10]">
+        {images.map((img, i) => (
+          <img
+            key={i}
+            src={img.src}
+            alt={img.alt}
+            loading={i === 0 ? "eager" : "lazy"}
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1800ms] ease-in-out ${
+              i === index ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-foreground/15 via-transparent to-transparent" />
+
+        <button
+          type="button"
+          aria-label="Vorheriges Bild"
+          onClick={() => go(index - 1)}
+          className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-background/60 p-2 text-foreground backdrop-blur-md transition hover:bg-background/90 sm:left-5 sm:p-3"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <button
+          type="button"
+          aria-label="Nächstes Bild"
+          onClick={() => go(index + 1)}
+          className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-background/60 p-2 text-foreground backdrop-blur-md transition hover:bg-background/90 sm:right-5 sm:p-3"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+      </div>
+
+      <div className="mt-6 flex justify-center gap-2.5">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`Bild ${i + 1} anzeigen`}
+            onClick={() => go(i)}
+            className={`h-1.5 rounded-full transition-all duration-500 ${
+              i === index ? "w-8 bg-rose" : "w-1.5 bg-foreground/25 hover:bg-foreground/50"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function Studio() {
   const images = [
     { src: studio1, alt: "Empfangsbereich des Studios mit zarten Roséˇtönen" },
