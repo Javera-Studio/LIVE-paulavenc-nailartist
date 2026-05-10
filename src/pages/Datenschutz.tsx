@@ -11,7 +11,10 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
-function DatenschutzPage() {
+export default function DatenschutzPage() {
+  useEffect(() => {
+    document.title = "Datenschutzerklärung — Paula Venc Private Nailartist Wien";
+  }, []);
   return (
     <main className="min-h-screen bg-background">
       <div className="mx-auto max-w-2xl px-6 py-24 md:px-10 md:py-32">
