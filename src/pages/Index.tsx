@@ -1,5 +1,5 @@
 import type * as React from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import heroNails from "@/assets/hero-nails.jpg";
 import aboutArtist from "@/assets/paula-portrait.png";
 import logo from "@/assets/logo-paula-venc.jpg";
@@ -19,11 +19,11 @@ import studio2 from "@/assets/studio-2.jpg";
 import studio3 from "@/assets/studio-3.jpg";
 import studio4 from "@/assets/studio-4.jpg";
 
-export const Route = createFileRoute("/")({
-  component: Index,
-});
-
 const BOOKING_URL = "#booking";
+
+export default function IndexPage() {
+  return <Index />;
+}
 
 function Nav() {
   return (

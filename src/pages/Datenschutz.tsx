@@ -1,16 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export const Route = createFileRoute("/datenschutz")({
-  head: () => ({
-    meta: [
-      { title: "Datenschutzerklärung — Paula Venc Private Nailartist Wien" },
-      { name: "description", content: "Datenschutzerklärung von Paula Venc, Private Nailartist in Wien 1010." },
-      { property: "og:title", content: "Datenschutzerklärung — Paula Venc" },
-      { property: "og:description", content: "Datenschutzerklärung von Paula Venc, Private Nailartist in Wien 1010." },
-    ],
-  }),
-  component: DatenschutzPage,
-});
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -21,7 +11,10 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
-function DatenschutzPage() {
+export default function DatenschutzPage() {
+  useEffect(() => {
+    document.title = "Datenschutzerklärung — Paula Venc Private Nailartist Wien";
+  }, []);
   return (
     <main className="min-h-screen bg-background">
       <div className="mx-auto max-w-2xl px-6 py-24 md:px-10 md:py-32">
