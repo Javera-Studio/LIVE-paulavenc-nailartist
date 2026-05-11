@@ -19,7 +19,6 @@ import studio1 from "@/assets/studio-1.jpg";
 import studio2 from "@/assets/studio-2.jpg";
 import studio3 from "@/assets/studio-3.jpg";
 import studio4 from "@/assets/studio-4.jpg";
-
 const BOOKING_URL = "https://buchung.treatwell.at/ort/506179/menue/";
 
 export default function IndexPage() {
@@ -606,7 +605,6 @@ function Studio() {
           <StudioCarousel images={images} />
         </div>
 
-
         <p className="mt-12 text-center font-serif text-lg italic text-foreground/80 md:text-xl">
           Private Atmosphäre – keine Hektik, keine Wartezeiten
         </p>
@@ -641,9 +639,7 @@ function Hours() {
           <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">Öffnungszeiten</h2>
           <div className="mx-auto gold-divider my-8" />
         </div>
-      <p className="mt-3 text-sm font-light text-foreground/60 text-center">
-  Termine nur nach Vereinbarung
-</p>
+        <p className="mt-3 text-sm font-light text-foreground/60 text-center">Termine nur nach Vereinbarung</p>
         <ul className="mx-auto max-w-lg space-y-3 text-sm font-light">
           {hours.map((h) => (
             <li
