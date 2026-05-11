@@ -20,7 +20,7 @@ import studio2 from "@/assets/studio-2.jpg";
 import studio3 from "@/assets/studio-3.jpg";
 import studio4 from "@/assets/studio-4.jpg";
 
-const BOOKING_URL = "#booking";
+const BOOKING_URL = "https://buchung.treatwell.at/ort/506179/menue/";
 
 export default function IndexPage() {
   return <Index />;
@@ -70,6 +70,8 @@ function Nav() {
         </ul>
         <a
           href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden rounded-full bg-rose px-5 py-2.5 text-xs uppercase tracking-[0.2em] text-primary-foreground shadow-soft transition hover:bg-rose-deep md:inline-block"
         >
           Buchen
@@ -89,6 +91,8 @@ function CtaButton({
   return (
     <a
       href={BOOKING_URL}
+      target="_blank"
+      rel="noopener noreferrer"
       className={
         "inline-block rounded-full bg-rose px-8 py-4 text-xs uppercase tracking-[0.25em] text-primary-foreground shadow-soft transition hover:bg-rose-deep hover:shadow-elegant " +
         className
