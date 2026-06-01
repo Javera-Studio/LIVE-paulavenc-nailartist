@@ -79,6 +79,16 @@ export default function ImpressumPage() {
             <p><span className="font-medium text-foreground">Berufsbezeichnung:</span> Modellieren von Fingernägeln</p>
           </div>
 
+          {/* Urheberrecht */}
+          <div className="space-y-2">
+            <p className="font-medium text-foreground">Urheberrecht</p>
+            <p>
+              Alle auf dieser Website verwendeten Fotos und Inhalte sind Eigentum von Paula Venc und urheberrechtlich
+              geschützt. Eine Verwendung, Vervielfältigung oder Weitergabe ohne ausdrückliche Zustimmung ist nicht
+              gestattet.
+            </p>
+          </div>
+
           {/* Online-Streitbeilegung */}
           <div className="space-y-2">
             <p className="font-medium text-foreground">Angaben zur Online-Streitbeilegung</p>

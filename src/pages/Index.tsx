@@ -19,7 +19,7 @@ import studio1 from "@/assets/studio-1.jpg";
 import studio2 from "@/assets/studio-2.jpg";
 import studio3 from "@/assets/studio-3.jpg";
 import studio4 from "@/assets/studio-4.jpg";
-const BOOKING_URL = "https://buchung.treatwell.at/ort/506179/menue/";
+const BOOKING_URL = "https://buchung.treatwell.at/ort/nagelstudio-paula-venc-private-nailartist/";
 
 export default function IndexPage() {
   return <Index />;
@@ -367,6 +367,9 @@ function Services() {
         <p className="mt-10 text-center text-xs italic font-light text-muted-foreground">
           Die Preise können je nach Aufwand variieren.
         </p>
+        <p className="mt-2 text-center text-xs font-light text-muted-foreground">
+          Alle Preise inkl. 20% MwSt.
+        </p>
         <p className="mt-3 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
           <span className="text-gold">✦</span> &nbsp; Nagelmodellagen ab 18 Jahren
         </p>
@@ -674,7 +677,7 @@ function Booking() {
           Sichere dir jetzt deinen Termin für gepflegte, natürliche Nägel in Wien.
         </p>
         <a
-          href="https://example.com/booking"
+          href="https://buchung.treatwell.at/ort/nagelstudio-paula-venc-private-nailartist/"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-10 inline-block rounded-full bg-rose px-10 py-4 text-xs uppercase tracking-[0.25em] text-primary-foreground transition hover:bg-rose-deep"
@@ -703,9 +706,7 @@ function Footer() {
             Fichtegasse 7<br />
             1010 Wien
           </address>
-          <a href="tel:+436642215398" className="block pt-2 transition hover:text-rose">
-            0664 2215398
-          </a>
+          <p className="pt-2 text-background/85">0664 2215398</p>
           <a href="mailto:office@paulavenc.at" className="block transition hover:text-rose">
             office@paulavenc.at
           </a>
@@ -768,10 +769,12 @@ function Footer() {
 function StickyMobileCta() {
   return (
     <a
-      href="tel:+436642215398"
+      href={BOOKING_URL}
+      target="_blank"
+      rel="noopener noreferrer"
       className="fixed inset-x-0 bottom-0 z-50 flex items-center justify-center gap-2 bg-rose px-6 py-4 text-center text-sm font-medium tracking-wide text-primary-foreground shadow-elegant md:hidden"
     >
-      <span>Jetzt buchen – 0664 221 5398</span>
+      <span>Jetzt Termin sichern</span>
     </a>
   );
 }
