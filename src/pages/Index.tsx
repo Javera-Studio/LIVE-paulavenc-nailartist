@@ -19,6 +19,7 @@ import studio1 from "@/assets/studio-1.jpg";
 import studio2 from "@/assets/studio-2.jpg";
 import studio3 from "@/assets/studio-3.jpg";
 import studio4 from "@/assets/studio-4.jpg";
+import javeraLogo from "@/assets/Javera.logo.rund.png";
 const BOOKING_URL = "https://buchung.treatwell.at/ort/nagelstudio-paula-venc-private-nailartist/";
 
 export default function IndexPage() {
@@ -761,6 +762,24 @@ function Footer() {
             </Link>
           </div>
         </div>
+      </div>
+      <div className="pb-5 pt-1 text-center">
+        <a
+          href="https://javera-studio.at"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group inline-flex items-center gap-1.5 text-[10px] tracking-[0.2em] text-background/30 transition-all duration-500 hover:text-background/55 uppercase"
+          style={{ fontWeight: 300, letterSpacing: "0.18em" }}
+        >
+          <span>Webdesign by</span>
+          <img
+            src={javeraLogo}
+            alt="JAVERA STUDIO"
+            className="h-3.5 w-3.5 rounded-full opacity-40 transition-opacity duration-500 group-hover:opacity-70"
+            style={{ display: "inline-block", verticalAlign: "middle" }}
+          />
+          <span>JAVERA STUDIO</span>
+        </a>
       </div>
     </footer>
   );
