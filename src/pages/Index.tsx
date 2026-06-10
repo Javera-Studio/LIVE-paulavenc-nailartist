@@ -119,7 +119,7 @@ function Hero() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(20, 12, 8, 0.55) 0%, rgba(20, 12, 8, 0.45) 45%, rgba(20, 12, 8, 0.3) 80%, rgba(20, 12, 8, 0.15) 100%)",
+            "radial-gradient(ellipse at center, rgba(20, 12, 8, 0.68) 0%, rgba(20, 12, 8, 0.58) 45%, rgba(20, 12, 8, 0.42) 80%, rgba(20, 12, 8, 0.26) 100%)",
         }}
       />
       <div
@@ -136,8 +136,8 @@ function Hero() {
             Private Nailartist · Wien 1010
           </p>
           <h1
-            className="mt-6 font-serif text-4xl leading-[1.1] drop-shadow-[0_2px_6px_rgba(255,255,255,0.25)] md:text-5xl lg:text-6xl"
-            style={{ color: "#2A1F1B" }}
+            className="mt-6 font-serif text-4xl leading-[1.1] drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)] md:text-5xl lg:text-6xl"
+            style={{ color: "#FDF6F0" }}
           >
             Deine Auszeit für perfekte, natürliche Nägel
           </h1>
