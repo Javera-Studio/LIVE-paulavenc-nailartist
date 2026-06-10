@@ -137,15 +137,15 @@ function Hero() {
           </p>
           <h1
             className="mt-6 font-serif text-4xl leading-[1.1] drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)] md:text-5xl lg:text-6xl"
-            style={{ color: "#FDF6F0" }}
+            style={{ color: "#E7C8C8" }}
           >
             Deine Auszeit für perfekte, natürliche Nägel
           </h1>
-          <p className="mx-auto mt-8 max-w-xl whitespace-pre-line font-serif text-lg leading-[1.7] text-white/95 drop-shadow-[0_1px_4px_rgba(0,0,0,0.55)] md:text-xl md:leading-[1.7]">
+          <p className="mx-auto mt-8 max-w-xl whitespace-pre-line font-serif text-lg leading-[1.7] drop-shadow-[0_1px_4px_rgba(0,0,0,0.55)] md:text-xl md:leading-[1.7]" style={{ color: "#DDB7BC" }}>
             {"In privater Atmosphäre –\nmit voller Aufmerksamkeit nur für dich"}
           </p>
           <div className="gold-divider mx-auto my-10" />
-          <p className="mt-3 text-sm font-light tracking-wide text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+          <p className="mt-3 text-sm font-light tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]" style={{ color: "#E0C4C4" }}>
             <span className="text-gold">★</span> 5.0 Bewertung — über 650 zufriedene Kundinnen
           </p>
           <p className="mt-2 text-[11px] uppercase tracking-[0.3em] text-gold/90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
@@ -153,7 +153,7 @@ function Hero() {
           </p>
           <div className="mt-12 flex flex-col items-center gap-4">
             <CtaButton />
-            <p className="text-sm font-light italic text-white/85 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+            <p className="text-sm font-light italic drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]" style={{ color: "#D4AEAE" }}>
               Beliebte Termine schnell vergeben.
             </p>
           </div>
