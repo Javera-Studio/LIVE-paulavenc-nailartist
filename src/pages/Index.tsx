@@ -371,6 +371,9 @@ function Services() {
         <p className="mt-2 text-center text-xs font-light text-muted-foreground">
           Alle Preise inkl. 20% MwSt.
         </p>
+        <p className="mt-2 text-center text-xs font-light text-muted-foreground/60">
+          Preise zuletzt aktualisiert am 12.07.2026
+        </p>
         <p className="mt-3 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
           <span className="text-gold">✦</span> &nbsp; Nagelmodellagen ab 18 Jahren
         </p>
