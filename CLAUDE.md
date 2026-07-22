@@ -2,6 +2,45 @@
 
 One-Pager für paulavenc.at (Paula Venc – Private Nailartist Wien), gebaut von JAVERA Studio. Statisches React/Vite-SPA, Deployment über Vercel (kein eigenes Backend, keine API-Routes).
 
+## Code-Qualität & Architektur-Standards
+
+Baue dieses React-Projekt mit professionellem, wartbarem Code, aber ohne unnötige Überarchitektur. Die Website ist ein überschaubarer One-Pager für eine Nailartistin. Verwende deshalb einfache, klare und bewährte Lösungen.
+
+Achte auf folgende Qualitätsstandards:
+
+- TypeScript im Strict Mode
+- saubere und nachvollziehbare Ordnerstruktur
+- kleine, logisch getrennte Komponenten
+- keine unnötigen Abstraktionen
+- keine doppelten Komponenten oder Styles
+- wiederverwendbare Komponenten nur dort, wo es sinnvoll ist
+- klare Trennung von Präsentations- und Logik-Komponenten
+- keine unnötigen useEffect- oder useState-Lösungen
+- semantisches HTML
+- gute Accessibility
+- responsive Umsetzung
+- optimierte, komprimierte Bilder (passende Formate wie WebP/AVIF, passende Größen)
+- saubere Metadaten und SEO-Grundlagen
+- verständliche Namen für Dateien, Komponenten und Funktionen
+- keine ungenutzten Imports, Dateien oder Variablen
+- keine hardcodierten Inhalte, wenn diese sinnvoll zentral gepflegt werden können
+- keine großen Komponenten mit zu vielen Verantwortlichkeiten
+- keine schnellen Workarounds oder KI-typischen Code-Abkürzungen
+
+Priorisiere Lesbarkeit und Wartbarkeit vor technischer Komplexität. Der Code soll so aufgebaut sein, dass ein erfahrener Entwickler das Projekt später problemlos übernehmen, verstehen und erweitern kann.
+
+Bevor eine Aufgabe abgeschlossen wird, prüfen:
+
+1. Ist die Lösung einfacher möglich?
+2. Gibt es doppelten Code?
+3. Ist die Komponente zu groß?
+4. Wird unnötig JavaScript verwendet?
+5. Sind Benennung und Struktur verständlich?
+6. Bleibt die bestehende Funktionalität erhalten?
+7. Würde diese Lösung eine professionelle Code-Review bestehen?
+
+Nach Änderungen immer TypeScript-, Lint- und Build-Prüfungen ausführen und gefundene Fehler beheben.
+
 ## AEO (Answer Engine Optimization) Standards für JAVERA Projekte
 
 Canonical/Single Source of Truth: [Javera-Studio/javera-dev-standards](https://github.com/Javera-Studio/javera-dev-standards) (AEO-STANDARDS.md). Diese Kopie hier ist die für dieses Repo verbindliche, git-getrackte Fassung — bei Änderungen am Standard beide Stellen synchron halten.
