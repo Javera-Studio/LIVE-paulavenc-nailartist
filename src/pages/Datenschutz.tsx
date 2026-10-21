@@ -60,10 +60,29 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
+          <Section title="Eingebettetes Treatwell-Buchungsmenü">
+            <p>
+              Im Bereich &bdquo;Leistungen &amp; Preise&ldquo; ist das Buchungsmenü von Treatwell
+              direkt in unsere Website eingebettet (iframe). Anbieter ist die Treatwell Group
+              (buchung.treatwell.at). Beim Aufruf der Seite stellt Ihr Browser eine Verbindung zu
+              Treatwell her; dabei werden insbesondere Ihre IP-Adresse sowie Browser- und
+              Geräteinformationen an Treatwell übermittelt. Treatwell kann dabei eigene Cookies
+              setzen und die Daten zu eigenen Zwecken verarbeiten.
+            </p>
+            <p>
+              Zweck der Einbettung ist die aktuelle Darstellung unserer Leistungen und Preise sowie
+              die einfache Terminbuchung (berechtigtes Interesse, Art. 6 Abs. 1 lit. f DSGVO).
+              Einstellungen zu Cookies können Sie im eingebetteten Menü unter
+              &bdquo;Cookie-Einstellungen&ldquo; vornehmen. Es gelten die Datenschutzbestimmungen von
+              Treatwell.
+            </p>
+          </Section>
+
           <Section title="Cookies">
             <p>
-              Unsere Website verwendet nur technisch notwendige Cookies, um die Funktion der Seite
-              sicherzustellen.
+              Unsere Website selbst verwendet nur technisch notwendige Cookies, um die Funktion der
+              Seite sicherzustellen. Das eingebettete Treatwell-Menü kann eigene Cookies setzen (siehe
+              oben).
             </p>
           </Section>
 
