@@ -30,7 +30,7 @@ export default function ImpressumPage() {
           {/* Kontakt */}
           <div className="space-y-1">
             <p className="font-medium text-foreground">Paula Venc</p>
-            <p>Schubertring 4/7</p>
+            <p>Fichtegasse 7</p>
             <p>1010 Wien</p>
             <p>Österreich</p>
           </div>
