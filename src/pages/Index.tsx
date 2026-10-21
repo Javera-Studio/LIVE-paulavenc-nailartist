@@ -299,20 +299,61 @@ function Trust() {
 }
 
 function TreatwellMenu() {
+  const [enabled, setEnabled] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
+  const widgetRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    if (!enabled || !widgetRef.current) return;
+    setLoading(true);
+    const cssId = "treatwell-venue-menu-stylesheet";
+    let stylesheet = document.getElementById(cssId) as HTMLLinkElement | null;
+    if (!stylesheet) {
+      stylesheet = document.createElement("link");
+      stylesheet.id = cssId;
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = "https://buchung.treatwell.at/common/venue-menu/css/widget-button.css";
+      document.head.appendChild(stylesheet);
+    }
+    // Treatwell discovers the container when its vendor script first executes.
+    // React renders the container before this effect runs.
+    const script = document.createElement("script");
+    script.src = "https://buchung.treatwell.at/common/venue-menu/javascript/widget-button.js?v1";
+    script.async = true;
+    script.onload = () => setLoading(false);
+    script.onerror = () => setLoading(false);
+    document.body.appendChild(script);
+    return () => {
+      script.remove();
+    };
+  }, [enabled]);
+
   return (
     <div className="mx-auto mt-12 max-w-4xl rounded-2xl bg-background px-5 py-10 text-center shadow-soft sm:px-10">
-      <h3 className="font-serif text-2xl text-foreground sm:text-3xl">Alle Behandlungen & Preise</h3>
-      <p className="mx-auto mt-4 max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
-        Entdecke meine aktuellen Leistungen und Preise direkt bei Treatwell und finde deinen Wunschtermin.
-      </p>
-      <a
-        href="https://buchung.treatwell.at/ort/506179/menue/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-8 inline-block rounded-full bg-rose px-8 py-4 text-xs uppercase tracking-[0.2em] text-primary-foreground shadow-soft transition hover:bg-rose-deep"
-      >
-        Behandlungen & Preise ansehen
-      </a>
+      {!enabled ? (
+        <>
+          <h3 className="font-serif text-2xl text-foreground sm:text-3xl">Alle Behandlungen & Preise</h3>
+          <p className="mx-auto mt-4 max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
+            Entdecke meine aktuellen Leistungen und Preise direkt im Treatwell-Buchungsmenü.
+          </p>
+          <button type="button" onClick={() => setEnabled(true)}
+            className="mt-8 rounded-full bg-rose px-8 py-4 text-xs uppercase tracking-[0.2em] text-primary-foreground shadow-soft transition hover:bg-rose-deep">
+            Behandlungen & Preise anzeigen
+          </button>
+          <p className="mt-4 text-xs font-light text-muted-foreground">Mit dem Öffnen werden Inhalte von Treatwell geladen.</p>
+        </>
+      ) : (
+        <>
+          {loading && <p className="mb-5 text-sm text-muted-foreground">Treatwell-Menü wird geladen …</p>}
+          <div ref={widgetRef} id="wahanda-online-booking-widget-iframe"
+            data-widget-url="https://buchung.treatwell.at/ort/506179/menue/" className="min-h-20 text-left" />
+          <p className="mt-6 text-sm font-light text-muted-foreground">
+            Falls das Menü nicht angezeigt wird, kannst du{" "}
+            <a href="https://buchung.treatwell.at/ort/506179/menue/" target="_blank" rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-rose">alle Preise und Termine direkt bei Treatwell ansehen</a>.
+          </p>
+        </>
+      )}
     </div>
   );
 }
