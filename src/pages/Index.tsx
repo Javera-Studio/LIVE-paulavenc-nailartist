@@ -298,50 +298,35 @@ function Trust() {
   );
 }
 
+// Entspricht dem offiziellen Treatwell-Widget (widget-button.js): das Skript erzeugt lediglich einen
+// iframe auf data-widget-url. Wir rendern ihn direkt, damit er nicht von Skript-Blockern abhängt.
+const TREATWELL_MENU_URL =
+  "https://buchung.treatwell.at/ort/506179/menue/?utm_source=widget&utm_medium=partners&utm_campaign=website_embed";
+
 function TreatwellMenu() {
-  const [loadError, setLoadError] = React.useState(false);
-
-  React.useEffect(() => {
-    const stylesheet = document.createElement("link");
-    stylesheet.rel = "stylesheet";
-    stylesheet.href = "https://buchung.treatwell.at/common/venue-menu/css/widget-button.css";
-    document.head.appendChild(stylesheet);
-
-    // The container below is already in the DOM when this effect executes.
-    const script = document.createElement("script");
-    script.src = "https://buchung.treatwell.at/common/venue-menu/javascript/widget-button.js?v1";
-    script.async = true;
-    script.onerror = () => setLoadError(true);
-    document.body.appendChild(script);
-
-    return () => {
-      script.remove();
-      stylesheet.remove();
-    };
-  }, []);
-
   return (
-    <div className="mx-auto mt-12 max-w-4xl rounded-2xl bg-background px-5 py-10 text-center shadow-soft sm:px-10">
-      <div
-        id="wahanda-online-booking-widget-iframe"
-        data-widget-url="https://buchung.treatwell.at/ort/506179/menue/"
-        className="w-full text-left"
+    <div className="mx-auto mt-12 max-w-4xl rounded-2xl bg-background p-2 shadow-soft sm:p-4">
+      <iframe
+        src={TREATWELL_MENU_URL}
+        title="Leistungen und Preise – Treatwell-Buchungsmenü"
+        loading="lazy"
+        referrerPolicy="strict-origin-when-cross-origin"
+        className="block h-[640px] w-full rounded-xl border-0 md:h-[900px]"
       />
-      {loadError && (
-        <p className="mb-4 text-sm text-muted-foreground">
-          Das Treatwell-Menü konnte nicht geladen werden.
-        </p>
-      )}
-      <p className="mt-6 text-sm font-light text-muted-foreground">
-        Du kannst auch{" "}
+      <p className="px-3 pb-3 pt-4 text-center text-xs font-light leading-relaxed text-muted-foreground">
+        Das Menü wird live von Treatwell geladen; dabei werden Daten an Treatwell übermittelt (siehe{" "}
+        <a href="/datenschutz" className="underline underline-offset-4 hover:text-rose">
+          Datenschutz
+        </a>
+        ).{" "}
         <a
-          href="https://buchung.treatwell.at/ort/506179/menue/"
+          href="https://buchung.treatwell.at/ort/nagelstudio-paula-venc-private-nailartist/"
           target="_blank"
           rel="noopener noreferrer"
           className="underline underline-offset-4 hover:text-rose"
         >
-          alle Behandlungen und Preise direkt bei Treatwell ansehen
-        </a>.
+          Menü bei Treatwell öffnen
+        </a>
       </p>
     </div>
   );
