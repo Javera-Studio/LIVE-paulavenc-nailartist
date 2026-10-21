@@ -299,45 +299,20 @@ function Trust() {
 }
 
 function TreatwellMenu() {
-  const [enabled, setEnabled] = React.useState(false);
-  const widgetUrl = "https://buchung.treatwell.at/ort/506179/menue/";
-
   return (
     <div className="mx-auto mt-12 max-w-4xl rounded-2xl bg-background px-5 py-10 text-center shadow-soft sm:px-10">
-      {!enabled ? (
-        <>
-          <h3 className="font-serif text-2xl text-foreground sm:text-3xl">Behandlungen & Preise entdecken</h3>
-          <p className="mx-auto mt-4 max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
-            Alle Behandlungen, aktuellen Preise und verfügbaren Termine findest du in meinem Treatwell-Buchungsmenü.
-          </p>
-          <button
-            type="button"
-            onClick={() => setEnabled(true)}
-            className="mt-8 rounded-full bg-rose px-8 py-4 text-xs uppercase tracking-[0.2em] text-primary-foreground shadow-soft transition hover:bg-rose-deep"
-          >
-            Behandlungen & Preise anzeigen
-          </button>
-          <p className="mt-4 text-xs font-light text-muted-foreground">
-            Mit dem Öffnen werden Inhalte von Treatwell geladen.
-          </p>
-        </>
-      ) : (
-        <>
-          <iframe
-            title="Paula Venc – Behandlungen und Preise auf Treatwell"
-            src={widgetUrl}
-            className="block h-[760px] w-full border-0"
-            loading="lazy"
-            referrerPolicy="strict-origin-when-cross-origin"
-          />
-          <p className="mt-6 text-sm font-light text-muted-foreground">
-            Wird das Menü nicht angezeigt?{" "}
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-rose">
-              Preise und Termine direkt bei Treatwell öffnen
-            </a>.
-          </p>
-        </>
-      )}
+      <h3 className="font-serif text-2xl text-foreground sm:text-3xl">Alle Behandlungen & Preise</h3>
+      <p className="mx-auto mt-4 max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
+        Entdecke meine aktuellen Leistungen und Preise direkt bei Treatwell und finde deinen Wunschtermin.
+      </p>
+      <a
+        href="https://buchung.treatwell.at/ort/506179/menue/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-8 inline-block rounded-full bg-rose px-8 py-4 text-xs uppercase tracking-[0.2em] text-primary-foreground shadow-soft transition hover:bg-rose-deep"
+      >
+        Behandlungen & Preise ansehen
+      </a>
     </div>
   );
 }
