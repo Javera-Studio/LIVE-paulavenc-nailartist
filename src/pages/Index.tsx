@@ -300,25 +300,7 @@ function Trust() {
 
 function TreatwellMenu() {
   const [enabled, setEnabled] = React.useState(false);
-
-  React.useEffect(() => {
-    if (!enabled) return;
-
-    const stylesheet = document.createElement("link");
-    stylesheet.rel = "stylesheet";
-    stylesheet.href = "https://buchung.treatwell.at/common/venue-menu/css/widget-button.css";
-    document.head.appendChild(stylesheet);
-
-    const script = document.createElement("script");
-    script.src = "https://buchung.treatwell.at/common/venue-menu/javascript/widget-button.js?v1";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      script.remove();
-      stylesheet.remove();
-    };
-  }, [enabled]);
+  const widgetUrl = "https://buchung.treatwell.at/ort/506179/menue/";
 
   return (
     <div className="mx-auto mt-12 max-w-4xl rounded-2xl bg-background px-5 py-10 text-center shadow-soft sm:px-10">
@@ -341,15 +323,17 @@ function TreatwellMenu() {
         </>
       ) : (
         <>
-          <div
-            id="wahanda-online-booking-widget-iframe"
-            data-widget-url="https://buchung.treatwell.at/ort/506179/menue/"
-            className="min-h-80 text-left"
+          <iframe
+            title="Paula Venc – Behandlungen und Preise auf Treatwell"
+            src={widgetUrl}
+            className="block h-[760px] w-full border-0"
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
           />
-          <p className="mt-6 text-xs font-light text-muted-foreground">
-            Falls das Menü nicht angezeigt wird, kannst du die{" "}
+          <p className="mt-6 text-sm font-light text-muted-foreground">
+            Wird das Menü nicht angezeigt?{" "}
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-rose">
-              Behandlungen direkt bei Treatwell ansehen
+              Preise und Termine direkt bei Treatwell öffnen
             </a>.
           </p>
         </>
