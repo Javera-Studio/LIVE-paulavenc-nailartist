@@ -118,8 +118,8 @@ Umgesetzt in `vercel.json` (`headers`-Array, Route `/(.*)`):
 - **Content-Security-Policy** – vor dem Setzen wurde der komplette Quellcode (`src/`, `index.html`) nach extern eingebundenen Ressourcen gescannt. Ergebnis (Stand Security-Review 2026-07-11):
   - Google Fonts: `fonts.googleapis.com` (Stylesheet) + `fonts.gstatic.com` (Font-Dateien) → in `style-src` bzw. `font-src` erlaubt
   - Kein Analytics/Tracking-Snippet (kein gtag, keine GA/GTM, kein Meta-Pixel)
-  - Keine iframes, keine Maps-/Payment-Embeds
-  - Buchung läuft ausschließlich über einen ausgehenden Link zu Treatwell (`buchung.treatwell.at`) – kein Embed, daher keine CSP-Freigabe nötig
+  - Ein iframe: Treatwell-Buchungsmenü (`buchung.treatwell.at`) in der Leistungen-Section → `frame-src https://buchung.treatwell.at` (Stand 2026-10-21). Keine Maps-/Payment-Embeds
+  - Buchung läuft über das eingebettete Treatwell-Menü sowie ausgehende Links zu Treatwell; `script-src` bleibt `'self'` (kein Vendor-Skript)
   - Alle Bilder/Video lokal aus `src/assets`, werden beim Build gebündelt (`img-src`/`media-src` bleiben `'self'`)
   - Kein Fetch/XHR zu externen APIs (`connect-src 'self'`)
   - `style-src` enthält `'unsafe-inline'`, weil einzelne Komponenten (`src/components/ui/chart.tsx`, `src/components/ui/progress.tsx`, `src/pages/Index.tsx`) inline `style={{...}}`-Attribute verwenden
