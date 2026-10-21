@@ -298,38 +298,67 @@ function Trust() {
   );
 }
 
+function TreatwellMenu() {
+  const [enabled, setEnabled] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!enabled) return;
+
+    const stylesheet = document.createElement("link");
+    stylesheet.rel = "stylesheet";
+    stylesheet.href = "https://buchung.treatwell.at/common/venue-menu/css/widget-button.css";
+    document.head.appendChild(stylesheet);
+
+    const script = document.createElement("script");
+    script.src = "https://buchung.treatwell.at/common/venue-menu/javascript/widget-button.js?v1";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      script.remove();
+      stylesheet.remove();
+    };
+  }, [enabled]);
+
+  return (
+    <div className="mx-auto mt-12 max-w-4xl rounded-2xl bg-background px-5 py-10 text-center shadow-soft sm:px-10">
+      {!enabled ? (
+        <>
+          <h3 className="font-serif text-2xl text-foreground sm:text-3xl">Behandlungen & Preise entdecken</h3>
+          <p className="mx-auto mt-4 max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
+            Alle Behandlungen, aktuellen Preise und verfügbaren Termine findest du in meinem Treatwell-Buchungsmenü.
+          </p>
+          <button
+            type="button"
+            onClick={() => setEnabled(true)}
+            className="mt-8 rounded-full bg-rose px-8 py-4 text-xs uppercase tracking-[0.2em] text-primary-foreground shadow-soft transition hover:bg-rose-deep"
+          >
+            Behandlungen & Preise anzeigen
+          </button>
+          <p className="mt-4 text-xs font-light text-muted-foreground">
+            Mit dem Öffnen werden Inhalte von Treatwell geladen.
+          </p>
+        </>
+      ) : (
+        <>
+          <div
+            id="wahanda-online-booking-widget-iframe"
+            data-widget-url="https://buchung.treatwell.at/ort/506179/menue/"
+            className="min-h-80 text-left"
+          />
+          <p className="mt-6 text-xs font-light text-muted-foreground">
+            Falls das Menü nicht angezeigt wird, kannst du die{" "}
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-rose">
+              Behandlungen direkt bei Treatwell ansehen
+            </a>.
+          </p>
+        </>
+      )}
+    </div>
+  );
+}
+
 function Services() {
-  const categories = [
-    {
-      title: "Neues Set",
-      items: [
-        { name: "Neues Set mit Gel / Polygel / Rubber Base — S/M", price: "ab 110 €" },
-        { name: "Neues Set mit Gel / Polygel / Rubber Base — L", price: "ab 120 €" },
-      ],
-    },
-    {
-      title: "Auffüllen",
-      items: [
-        { name: "Auffüllen — S/M", price: "ab 90 €" },
-        { name: "Auffüllen — L", price: "ab 100 €" },
-      ],
-    },
-    {
-      title: "Maniküre",
-      items: [
-        { name: "Russische Maniküre ohne Lack", price: "50 €" },
-        { name: "Japanische Maniküre", price: "60 €" },
-        { name: "Russische Maniküre + Entfernung", price: "75 €" },
-      ],
-    },
-    {
-      title: "Extras",
-      items: [
-        { name: "Easy Design", price: "ab 5 €" },
-        { name: "Chrome Powder", price: "10 €" },
-      ],
-    },
-  ];
   return (
     <section id="services" className="bg-nude/40 py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
@@ -338,49 +367,10 @@ function Services() {
           <h2 className="mt-4 font-serif text-4xl text-foreground md:text-5xl">Nageldesign & Maniküre in Wien</h2>
           <div className="mx-auto gold-divider my-8" />
           <p className="text-sm font-light leading-relaxed text-muted-foreground">
-            Klare Preise für hochwertige, natürliche Ergebnisse.
+            Entdecke meine Behandlungen und finde ganz einfach den passenden Termin für deine Wunschnägel.
           </p>
         </div>
-
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {categories.map((cat, i) => (
-            <article
-              key={cat.title}
-              className="rounded-2xl bg-background p-8 shadow-soft transition hover:shadow-elegant md:p-10"
-            >
-              <div className="flex items-baseline justify-between">
-                <h3 className="font-serif text-2xl text-foreground md:text-3xl">{cat.title}</h3>
-                <span className="font-serif text-sm text-gold">0{i + 1}</span>
-              </div>
-              <div className="gold-divider mt-4 mb-6" />
-              <ul className="divide-y divide-border/70">
-                {cat.items.map((it) => (
-                  <li key={it.name} className="flex items-baseline justify-between gap-6 py-3 text-sm font-light">
-                    <span className="text-foreground/85">{it.name}</span>
-                    <span className="whitespace-nowrap font-serif text-base text-rose">{it.price}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-
-        <p className="mt-10 text-center text-xs italic font-light text-muted-foreground">
-          Die Preise können je nach Aufwand variieren.
-        </p>
-        <p className="mt-2 text-center text-xs font-light text-muted-foreground">
-          Alle Preise inkl. 20% MwSt.
-        </p>
-        <p className="mt-2 text-center text-xs font-light text-muted-foreground/60">
-          Preise zuletzt aktualisiert am 12.07.2026
-        </p>
-        <p className="mt-3 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
-          <span className="text-gold">✦</span> &nbsp; Nagelmodellagen ab 18 Jahren
-        </p>
-        <div className="mt-12 text-center">
-          <CtaButton />
-        </div>
-
+        <TreatwellMenu />
         <div className="mt-24 grid items-center gap-12 md:grid-cols-2">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-rose">Nagellänge</p>
